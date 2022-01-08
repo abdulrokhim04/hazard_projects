@@ -2,13 +2,13 @@
   "name": "KurrXd",
   "version": "0.0.1",
   "description": "KurrXd",
-  "main": "node admin",
+  "main": "node index",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node admin"
+    "start": "node index"
   },
   "keywords": [
     "termux",
