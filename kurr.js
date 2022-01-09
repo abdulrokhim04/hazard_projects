@@ -3870,6 +3870,7 @@ gifnya = await getBuffer('https://telegra.ph/file/a92a5a213055a6a48f023.mp4')
 anu =`${emoji2(prefix)}`
 await kurr.sendMessage(from, gifnya, MessageType.video, {mimetype : 'video/mp4', quoted: ftrol, caption: anu})
 break
+case 'script':
 case 'sc':
 reply(`SC INI:\nhttps://github.com/KurrXd/Yuki-Bot\nSC KHUSUS JUALAN:\nhttps://github.com/KurrXd/Store-Botz\nMONGGO DIPAKAI`)
 break
