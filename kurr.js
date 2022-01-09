@@ -2895,7 +2895,7 @@ case 'jasasewa':
 
 ＰＲＩＣＥＬＩＳＴ ＨＡＲＧＡ：
 
-１５Ｋ＝ ＰＥＲＭＡＮＥＮ
+10Ｋ＝ ＰＥＲＭＡＮＥＮ
 
 
 MINAT KLIK ORDER
@@ -4458,8 +4458,7 @@ displayText: `⬡ NEXT `,
 }
 gameAdd(sender, glimit)
 break
-       case 'caklontong':
-         if(isGroup)return reply(`Di Chat Pribadi Aja Om`)
+       case 'caklontong':         
               if (isGame(sender, gcount, glimit)) return reply(`Limit game kamu sudah habis`)
               if (caklontong.hasOwnProperty(sender.split('@')[0])) return reply("Masih ada soal yg belum terjawab")
               get_result = await fetchJson(`https://api.lolhuman.xyz/api/tebak/caklontong?apikey=${lolkey}`)
