@@ -4429,7 +4429,7 @@ case 'blackpink':
        
        case 'tebakgambar':            
 if (tebakgambar.hasOwnProperty(sender.split('@')[0])) return reply("Selesein yg sebelumnya dulu atuh")
-  get_result = await fetchJson(`https://api.lolhuman.xyz/api/tebak/gambar2?apikey=${lolkey}`)
+  get_result = await fetchJson(`https://api.lolhuman.xyz/api/tebak/gambar?apikey=${lolkey}`)
 get_result = get_result.result
 ini_image = get_result.image
 jawaban = get_result.answer
@@ -4465,9 +4465,9 @@ break
               get_result = await fetchJson(`https://api.lolhuman.xyz/api/tebak/caklontong?apikey=${lolkey}`)
               get_result = get_result.result
               jawaban = get_result.answer
-              kisi_kisi = jawaban.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '_')
+              ini_txt = `TEBAK SNDIRI`              
               pertanyaan = get_result.question
-              kurr.sendMessage(from, '*+* ```Caklontong```\n\n *soal* :'+pertanyaan+'\n *kisi²* :'+kisi_kisi, text, { quoted: ftrol}).then(() => {
+              kurr.sendMessage(from, '*+* ```Caklontong```\n\n *soal* :'+pertanyaan+'\n *kisi²* :'+ini_txt, text, { quoted: ftrol}).then(() => {
               caklontong[sender.split('@')[0]] = jawaban.toLowerCase()
               fs.writeFileSync("./database/caklontong.json", JSON.stringify(caklontong))
 })
