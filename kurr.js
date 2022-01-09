@@ -4427,15 +4427,13 @@ case 'blackpink':
 
 
        
-       case 'tebakgambar':
-             if(isGroup)return reply(`Di Chat Pribadi Aja Om`)
+       case 'tebakgambar':            
 if (tebakgambar.hasOwnProperty(sender.split('@')[0])) return reply("Selesein yg sebelumnya dulu atuh")
-  get_result = await fetchJson(`https://api.lolhuman.xyz/api/tebak/gambar?apikey=${lolkey}`)
+  get_result = await fetchJson(`https://api.lolhuman.xyz/api/tebak/gambar2?apikey=${lolkey}`)
 get_result = get_result.result
 ini_image = get_result.image
 jawaban = get_result.answer
 ini_buffer = await getBuffer(ini_image)
-kisi_kisi = jawaban.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '_')
 buff = await getBuffer(ini_image)
 
 kurr.sendMessage(from, ini_buffer, image, { quoted: mek, caption: 'Silahkan jawab soal berikut ini\n\nPetunjuk :tebak sendirilah kontol\nWaktu : 30s' }).then(() => {
