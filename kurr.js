@@ -40,6 +40,7 @@ const ytsd = require('ytsr')
 const brainly = require('brainly-scraper')
 const ig = require('insta-fetcher')
 const cheerio = require('cheerio')
+const yts = require( 'yt-search')
 const fromData = require('form-data')
 const os = require('os')
 const translate = require('@vitalets/google-translate-api')
@@ -104,7 +105,7 @@ const _registered = JSON.parse(fs.readFileSync('./database/registered.json'))
 const kickarea = JSON.parse(fs.readFileSync('./database/kickarea.json'))
 const scommand = JSON.parse(fs.readFileSync('./database/scommand.json'))
 const autosticker = JSON.parse(fs.readFileSync('./database/autosticker.json'))
-const yts = require( 'yt-search')
+
 let glimit = JSON.parse(fs.readFileSync('./database/user/glimit.json'));
 let tebakanime = JSON.parse(fs.readFileSync('./database/tebakanime.json'))
 let tebakgambar = JSON.parse(fs.readFileSync('./database/tebakgambar.json'))
@@ -1192,19 +1193,19 @@ kurr.sendMessage("6281220670449@s.whatsapp.net", `bang di gosipin Ama wa.me/${se
 kurr.sendMessage(from, "Mampus Udh Ku Laporin", text)
 }
 if(budy.includes('Assalamualaikum')){
-cpref = `Hay Saya Yuki Whatsapp Ketik .menu Untuk Mengakses`
+cpref = `Hay Saya Xavhier Whatsapp Ketik .menu Untuk Mengakses`
 reply(cpref)
 }
 if(budy.includes('assalamualaikum')){
-cpref = `Hay Saya Yuki Whatsapp Ketik .menu Untuk Mengakses`
+cpref = `Hay Saya Xavhier Whatsapp Ketik .menu Untuk Mengakses`
 reply(cpref)
 }
 if(budy.includes('Hai')){
-cpref = `Hay Saya Yuki Whatsapp Ketik .menu Untuk Mengakses`
+cpref = `Hay Saya Xavhier Whatsapp Ketik .menu Untuk Mengakses`
 reply(cpref)
 }
 if(budy.includes('hai')){
-cpref = `Hay Saya Yuki Whatsapp Ketik .menu Untuk Mengakses`
+cpref = `Hay Saya Xavhier Whatsapp Ketik .menu Untuk Mengakses`
 reply(cpref)
 }
 if(budy.includes('tendang')){
@@ -1392,7 +1393,7 @@ if (isCmd && !isOwner) antiSpam.addFilter(from)
 		
 		//runtime berjalan
            runi = process.uptime() 
-           kurr.setStatus(`Hy Iam Yuki👧`).catch((_)=>_);
+           kurr.setStatus(`Hy Iam Xavhier👧`).catch((_)=>_);
 
            settingstatus = new Date() * 1;
            
@@ -1431,101 +1432,92 @@ kurr.sendMessage(from, listMsg, MessageType.listMessage, {contextInfo: { mention
 }
             break
             case 'quotes':
-            ini_result = await fetchJson('https://api.lolhuman.xyz/api/random/quotesnime?apikey=${lolkey}')
-     get_result = ini_result.result
-        ini_txt = `*${get_result.character} pernah berkata*\n\n`
-       ini_txt += `~${get_result.quote}`
+            
      reply(ini_txt)
      break
      case 'menu':
      case 'help':
- stod = `${sender}`
- listMsg = {
- buttonText: 'PILIH MENU DISINI',
- footerText: '*_© Yuki ゑ_*',
- description: `Hai @${stod.split('@')[0]}\nSaya Adalah Yuki Bot`,
- sections: [
-                     {
-                      "title": `----PILIH COMMAND DIBAWAH----`,
- rows: [
-                          {
-                              "title": "INFO THIS BOT",
-                              "description": '•|----Info Bot----|•',
-                              "rowId": ""
-                            
-                           },
-                           {
-                              "title": "SEWABOT",
-                              "description": '•|----Rent Bot----|•',
-                              "rowId": ""
-                            
-                           },
-                          {
-                              "title": "GRUP OFFICIAL BOT",
-                              "description": '•|----Grup Bot----|•',
-                              "rowId": ""
-                            
-                           },
-                           {
-                              "title": "groupmenu",
-                              "description": '•|----Grup Menu----|•',
-                              "rowId": ""
-                           },
-                           {
-                              "title": "downloadmenu",
-                              "description": '•|----Download Menu----|•',
-                              "rowId": ""
-                           },
-                           {
-                              "title": "makermenu",
-                              "description": '•|----Maker Menu----|•',
-                              "rowId": ""
-                           },
-                           {
-                           "title": "wibumenu",
-                              "description": '•|----Wibu Menu----|•',
-                              "rowId": ""
-                           },
-                           {
-                           "title": "harammenu",
-                              "description": '•|----18+ Menu----|•',
-                              "rowId": ""
-                           },
-                           {
-                           "title": "toolsmenu",
-                              "description": '•|----Tools Menu----|•',
-                              "rowId": ""
-                           },
-                           {
-                           "title": "funmenu",
-                              "description": '•|----Fun Menu----|•',
-                              "rowId": ""
-                           },
-                           {
-                              "title": "gamemenu",
-                                    "description": '•|----Game Menu----|•',
-                              "rowId": ""
-                           },
+    case 'catalog': 
 
-                           {
-                              "title": "QRISS",
-                              "description": '•|----FOR DONATE----|•',
-                              "rowId": ""
-                           },
-                           {
-                              "title": "SCRIPT",
-                                    "description": '•|----Script This Bot----|•',
-                              "rowId": ""
-                           }
-                           
-                        ]
-                     }],
- listType: 1
+
+                nama = 'PILIH COMMAND DIBAWAH'
+       ownerJid = "6281220670449@s.whatsapp.net"
+                nomor = 1
+                stod = `${sender}`
+       stst = await kurr.getStatus(`${sender.split('@')[0]}@c.us`)
+				stst = stst.status == 401 ? '' : stst.status
+       menunya = `──❒ Xhavier Menu❒──      
+ダ .ownermenu
+ダ .groupmenu
+ダ .downloadmenu
+ダ .funmenu
+ダ .makermenu
+ダ .toolsmenu
+ダ .wibumenu
+ダ .othermenu
+*──❒ Lainnya ❒──*
+ダ .info
+ダ .store
+ダ .owner
+ダ .runtime
+ダ .speed
+ダ .sc
+
+*──❒ HARGA SEWA BOT INI ❒──*
+6 bulan : 10k
+1 tahun : 20k
+TOTAL FITUR 500+
+
+YOUTUBE PEMILIK SCRIPT: KurrXd OFFICIAL
+`
+if(menuall == false){
+   //Masih langka
+anu = kurr.prepareMessageFromContent(from,{
+					"productMessage": {
+						"product": {
+								"productImage": {
+								"url": "https://mmg.whatsapp.net/d/f/AqiXPcyme5m5k9T3_CEtkFH_b8oluVDvf2kEqf3zLNE9.enc",
+						"mimetype": "image/jpeg",
+						"fileSha256": "Cs2ml+8ycgkAS99ePZvOaZeS9jH66XGqNnk8RWFg2NU=",
+						"fileLength": "33746",
+						"height": 540,
+						"width": 540,
+						"mediaKey": "9yzf1FGZs2xxnqSO6W3ZMIKU89Ktr+I+NKMSXMYTCwc=",
+						"fileEncSha256": "0QbzVIOAxjYMKytaU2Yp+ON6NKG/DKyvdva6zg7Qm10=",
+						"jpegThumbnail": fs.readFileSync("./logonya.jpeg")
+                                },
+                            "productId": "9999999",
+							"title": `${nama}`, 
+							"description": `${menunya}`,
+							"productImageCount": 1
+						},
+						"businessOwnerJid": `${ownerJid}`,
+						"contextInfo": {
+							"forwardingScore": 9999,
+							"isForwarded": true
+						}
+					}
+				},{quoted: ftrol, contextInfo: { mentionedJid: [dtod,otod,stod]}})
+                  kurr.relayWAMessage(anu)
+                  } else if(menuall = true){
+gbutsan = [
+{buttonId:`owner`,buttonText:{displayText:'OWNER'},type:1},
+{buttonId:`donasi`,buttonText:{displayText:'DONASI'},type:1},
+{buttonId:`script`,buttonText:{displayText:'SEWABOT'},type:1}
+]
+mhan = await kurr.prepareMessage(from, pporigi, image, {thumbnail: pporigi})
+const btnBngsat = {
+imageMessage: mhan.message.imageMessage,
+contentText: `${menunya}`,
+footerText: `Xavhier ゑ`,
+buttons: gbutsan,
+headerType: 4
 }
-kurr.sendMessage(from, listMsg, MessageType.listMessage, {contextInfo: { mentionedJid: [stod]},quoted:ftrol})
+kurr.sendMessage(from, btnBngsat, MessageType.buttonsMessage, { quoted: ftrol, caption: menunya, contextInfo: { mentionedJid: [dtod,otod,stod]}})
+                  }
 break
-        	
-  
+      
+
 case 'ownermenu':
   if (!isOwner && !mek.key.fromMe) return reply(`KHUSUS OWNER`)
         if(menusimpel == false){               
@@ -1538,63 +1530,60 @@ case 'ownermenu':
                 stod = `${sender}`
        stst = await kurr.getStatus(`${sender.split('@')[0]}@c.us`)
 				stst = stst.status == 401 ? '' : stst.status
-				ini_result = await fetchJson('https://api.lolhuman.xyz/api/random/quotesnime?apikey=${lolkey}')
-     get_result = ini_result.result
-        ini_txt = `*${get_result.character} pernah berkata*\n\n`
-       ini_txt += `~${get_result.quote}`
+				
        
        menu = `*─❒ OWNER MENU*
-_書 ${prefix}autorespon [ _on/off_ ]_
-_書 ${prefix}bc [ _teks/reply gif/image/video with caption_ ]_
-_書 ${prefix}tobc [ _reply sticker/audio with caption_ ]_
-_書 ${prefix}return [ _javascript_ ]_
-_書 ${prefix}delchat_
-_書 ${prefix}mute_
-_書 ${prefix}unmute_
-_書 ${prefix}public_
-_書 ${prefix}self_
-_書 ${prefix}spam [ _teks|jumlah_ ]_
-_書 ${prefix}demoteall_
-_書 ${prefix}promoteall_
-_書 ${prefix}addcmd [ _teks reply stc_ ]_
-_書 ${prefix}delcmd [ _reply stc_ ]_
-_書 ${prefix}listcmd_
-_書 ${prefix}spamsw [ _teks|jumlah_ ]_
-_書 ${prefix}upswteks [ _teks_ ]_
-_書 ${prefix}upswlokasi [ _teks_ ]_
-_書 ${prefix}upswaudio [ _reply audio_ ]_
-_書 ${prefix}upswvoice [ _reply audio_ ]_
-_書 ${prefix}upswsticker [ _reply sticker_ ]_
-_書 ${prefix}upswimage [ _reply image with caption_ ]_
-_書 ${prefix}upswgif [ _reply gif with caption_ ]_
-_書 ${prefix}upswvideo [ _reply video with caption_ ]_
-_書 ${prefix}shutdown_
-_書 ${prefix}offline [ _alasan_ ]_
-_書 ${prefix}online_
-_書 ${prefix}exif [ _nama|author_ ]_
-_書 ${prefix}setprofile [ _reply image_ ]_
-_書 ${prefix}setname [ _teks_ ]
-_書 ${prefix}setprefix [ _multi/nopref/prefix_ ]_
-_書 ${prefix}setbio [ _teks_ ]_
-_書 ${prefix}leave_
-_書 ${prefix}restart_
-_書 ${prefix}addrespon [ _tanya|jawab_ ]_
-_書 ${prefix}delrespon [ _nama_ ]_
-_書 ${prefix}listrespon_
-_書 ${prefix}readall_
-_書 ${prefix}unreadall_
-_書 ${prefix}archive_
-_書 ${prefix}unarchiveall_
-_書 ${prefix}pin_
-_書 ${prefix}unpin_
-_書 ${prefix}setmenu [ _ori/simpel_ ]_
-_書 ${prefix}setallmenu [ _ori/simpel_ ]_
-_書 ${prefix}leavetime [ _detik/menit/jam_ ]_
-_書 ${prefix}bukatime [ _detik/menit/jam_ ]_
-_書 ${prefix}tutuptime [ _detik/menit/jam_ ]_
-_書 ${prefix}nano [ _nama file_ ]_             
+_ダ ${prefix}autorespon [ _on/off_ ]_
+_ダ ${prefix}bc [ _teks/reply gif/image/video with caption_ ]_
+_ダ ${prefix}tobc [ _reply sticker/audio with caption_ ]_
+_ダ ${prefix}return [ _javascript_ ]_
+_ダ ${prefix}delchat_
+_ダ ${prefix}mute_
+_ダ ${prefix}unmute_
+_ダ ${prefix}public_
+_ダ ${prefix}self_
+_ダ ${prefix}spam [ _teks|jumlah_ ]_
+_ダ ${prefix}demoteall_
+_ダ ${prefix}promoteall_
+_ダ ${prefix}addcmd [ _teks reply stc_ ]_
+_ダ ${prefix}delcmd [ _reply stc_ ]_
+_ダ ${prefix}listcmd_
+_ダ ${prefix}spamsw [ _teks|jumlah_ ]_
+_ダ ${prefix}upswteks [ _teks_ ]_
+_ダ ${prefix}upswlokasi [ _teks_ ]_
+_ダ ${prefix}upswaudio [ _reply audio_ ]_
+_ダ ${prefix}upswvoice [ _reply audio_ ]_
+_ダ ${prefix}upswsticker [ _reply sticker_ ]_
+_ダ ${prefix}upswimage [ _reply image with caption_ ]_
+_ダ ${prefix}upswgif [ _reply gif with caption_ ]_
+_ダ ${prefix}upswvideo [ _reply video with caption_ ]_
+_ダ ${prefix}shutdown_
+_ダ ${prefix}offline [ _alasan_ ]_
+_ダ ${prefix}online_
+_ダ ${prefix}exif [ _nama|author_ ]_
+_ダ ${prefix}setprofile [ _reply image_ ]_
+_ダ ${prefix}setname [ _teks_ ]
+_ダ ${prefix}setprefix [ _multi/nopref/prefix_ ]_
+_ダ ${prefix}setbio [ _teks_ ]_
+_ダ ${prefix}leave_
+_ダ ${prefix}restart_
+_ダ ${prefix}addrespon [ _tanya|jawab_ ]_
+_ダ ${prefix}delrespon [ _nama_ ]_
+_ダ ${prefix}listrespon_
+_ダ ${prefix}readall_
+_ダ ${prefix}unreadall_
+_ダ ${prefix}archive_
+_ダ ${prefix}unarchiveall_
+_ダ ${prefix}pin_
+_ダ ${prefix}unpin_
+_ダ ${prefix}setmenu [ _ori/simpel_ ]_
+_ダ ${prefix}setallmenu [ _ori/simpel_ ]_
+_ダ ${prefix}leavetime [ _detik/menit/jam_ ]_
+_ダ ${prefix}bukatime [ _detik/menit/jam_ ]_
+_ダ ${prefix}tutuptime [ _detik/menit/jam_ ]_
+_ダ ${prefix}nano [ _nama file_ ]_             
  `
-sendButLocation(from, `${menu}`, "*_© Yuki ゑ_*", {jpegThumbnail:ofrply1,name:""}, [{buttonId:`menu`,buttonText:{displayText:'BACK TO MENU'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
+sendButLocation(from, `${menu}`, "*_© Xavhier ゑ_*", {jpegThumbnail:ofrply1,name:""}, [{buttonId:`menu`,buttonText:{displayText:'BACK TO MENU'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
 }
 else if(menusimpel = true){
         stod = `${sender}`
@@ -1602,7 +1591,7 @@ fill =`Ohayoo ${pushname}, ${tampilUcapan}
 Silahkan Pilih Untuk Menampilkan Menu
 
 Jika Button Tidak Muncul Ketik .allmenu`
-menu =` Yuki ゑ`
+menu =` Xavhier ゑ`
 gbutsan = [
 {buttonId:`allmenu`,buttonText:{displayText:'SHOW MENU'},type:1},
 {buttonId:`store`,buttonText:{displayText:'STORE MENU'},type:1},
@@ -1641,16 +1630,13 @@ case 'blmmenu':
                 stod = `${sender}`
        stst = await kurr.getStatus(`${sender.split('@')[0]}@c.us`)
 				stst = stst.status == 401 ? '' : stst.status
-				ini_result = await fetchJson('https://api.lolhuman.xyz/api/random/quotesnime?apikey=${lolkey}')
-     get_result = ini_result.result
-        ini_txt = `*${get_result.character} pernah berkata*\n\n`
-       ini_txt += `~${get_result.quote}`
+				
        
        menu = `*─❒ BIKIN LAG MENU (khusus owner)*
-_書 ${prefix}piltek_
-_書 ${prefix}gift_               
+_ダ ${prefix}piltek_
+_ダ ${prefix}gift_               
  `
-sendButLocation(from, `${menu}`, "*_© Yuki ゑ_*", {jpegThumbnail:ofrply1,name:""}, [{buttonId:`menu`,buttonText:{displayText:'BACK TO MENU'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
+sendButLocation(from, `${menu}`, "*_© Xavhier ゑ_*", {jpegThumbnail:ofrply1,name:""}, [{buttonId:`menu`,buttonText:{displayText:'BACK TO MENU'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
 }
 else if(menusimpel = true){
         stod = `${sender}`
@@ -1658,7 +1644,7 @@ fill =`Ohayoo ${pushname}, ${tampilUcapan}
 Silahkan Pilih Untuk Menampilkan Menu
 
 Jika Button Tidak Muncul Ketik .allmenu`
-menu =` Yuki ゑ`
+menu =` Xavhier ゑ`
 gbutsan = [
 {buttonId:`allmenu`,buttonText:{displayText:'SHOW MENU'},type:1},
 {buttonId:`store`,buttonText:{displayText:'STORE MENU'},type:1},
@@ -1696,44 +1682,41 @@ case 'groupmenu':
                 stod = `${sender}`
        stst = await kurr.getStatus(`${sender.split('@')[0]}@c.us`)
 				stst = stst.status == 401 ? '' : stst.status
-				ini_result = await fetchJson('https://api.lolhuman.xyz/api/random/quotesnime?apikey=${lolkey}')
-     get_result = ini_result.result
-        ini_txt = `*${get_result.character} pernah berkata*\n\n`
-       ini_txt += `~${get_result.quote}`
+				
        
        menu = `*──❒ GROUP MENU*
-_書 ${prefix}getpict [ _@tag_ ]_
-_書 ${prefix}getname [ _reply target_ ]_
-_書 ${prefix}getbio [ _reply target_ ]_
-_書 ${prefix}promote [ _@tag_ ]_
-_書 ${prefix}demote [ _@tag_ ]_
-_書 ${prefix}antilink [ _on/off_ ]_
-_書 ${prefix}antivirtex [ _on/off_ ]_
-_書 ${prefix} welcome [ _on/off_ ]_____
-_書 ${prefix}creategrup [ _nama|@ta___g_ ]
-_書 ${prefix}tictactoe [ _@tag_ ]_
-_書 ${prefix}delttt_
-_書 ${prefix}kick_
-_書 ${prefix}add_
-_書 ${prefix}getpp_
-_書 ${prefix}getdeskgc_
-_書 ${prefix}sider [ _reply pesan bot_ ]_
-_書 ${prefix}hacked [ _teks_ ]_
-_書 ${prefix}setnamegc [ _teks_ ]_
-_書 ${prefix}setdeskgc [ _teks_ ]_
-_書 ${prefix}fitnah [ _@tag|teks1|teks2_ ]_
-_書 ${prefix}kontak [ _@tag|nama_ ]_
-_書 ${prefix}kontag [ _@tag|nama_ ]_
-_書 ${prefix}opengc_
-_書 ${prefix}closegc_
-_書 ${prefix}resetlinkgc_
-_書 ${prefix}linkgrup_
-_書 ${prefix}hidetag [ _teks_ ]_
-_書 ${prefix}sticktag [ _nama sticker_ ]_
-_書 ${prefix}totag [ _reply media_ ]_        
+_ダ ${prefix}getpict [ _@tag_ ]_
+_ダ ${prefix}getname [ _reply target_ ]_
+_ダ ${prefix}getbio [ _reply target_ ]_
+_ダ ${prefix}promote [ _@tag_ ]_
+_ダ ${prefix}demote [ _@tag_ ]_
+_ダ ${prefix}antilink [ _on/off_ ]_
+_ダ ${prefix}antivirtex [ _on/off_ ]_
+_ダ ${prefix} welcome [ _on/off_ ]_____
+_ダ ${prefix}creategrup [ _nama|@ta___g_ ]
+_ダ ${prefix}tictactoe [ _@tag_ ]_
+_ダ ${prefix}delttt_
+_ダ ${prefix}kick_
+_ダ ${prefix}add_
+_ダ ${prefix}getpp_
+_ダ ${prefix}getdeskgc_
+_ダ ${prefix}sider [ _reply pesan bot_ ]_
+_ダ ${prefix}hacked [ _teks_ ]_
+_ダ ${prefix}setnamegc [ _teks_ ]_
+_ダ ${prefix}setdeskgc [ _teks_ ]_
+_ダ ${prefix}fitnah [ _@tag|teks1|teks2_ ]_
+_ダ ${prefix}kontak [ _@tag|nama_ ]_
+_ダ ${prefix}kontag [ _@tag|nama_ ]_
+_ダ ${prefix}opengc_
+_ダ ${prefix}closegc_
+_ダ ${prefix}resetlinkgc_
+_ダ ${prefix}linkgrup_
+_ダ ${prefix}hidetag [ _teks_ ]_
+_ダ ${prefix}sticktag [ _nama sticker_ ]_
+_ダ ${prefix}totag [ _reply media_ ]_        
        
  `
-sendButLocation(from, `${menu}`, "*_© Yuki ゑ_*", {jpegThumbnail:ofrply1,name:""}, [{buttonId:`menu`,buttonText:{displayText:'BACK TO MENU'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
+sendButLocation(from, `${menu}`, "*_© Xavhier ゑ_*", {jpegThumbnail:ofrply1,name:""}, [{buttonId:`menu`,buttonText:{displayText:'BACK TO MENU'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
 }
 else if(menusimpel = true){
         stod = `${sender}`
@@ -1741,7 +1724,7 @@ fill =`Ohayoo ${pushname}, ${tampilUcapan}
 Silahkan Pilih Untuk Menampilkan Menu
 
 Jika Button Tidak Muncul Ketik .allmenu`
-menu =` Yuki ゑ`
+menu =` Xavhier ゑ`
 gbutsan = [
 {buttonId:`allmenu`,buttonText:{displayText:'SHOW MENU'},type:1},
 {buttonId:`store`,buttonText:{displayText:'STORE MENU'},type:1},
@@ -1782,41 +1765,38 @@ case 'funmenu':
                 stod = `${sender}`
        stst = await kurr.getStatus(`${sender.split('@')[0]}@c.us`)
 				stst = stst.status == 401 ? '' : stst.status
-				ini_result = await fetchJson('https://api.lolhuman.xyz/api/random/quotesnime?apikey=${lolkey}')
-     get_result = ini_result.result
-        ini_txt = `*${get_result.character} pernah berkata*\n\n`
-       ini_txt += `~${get_result.quote}`
+				
        
        menu = `*─❒ FUN MENU NEW*
-_書 ${prefix}popo_
-_書 ${prefix}bego_
-_書 ${prefix}tolol_
-_書 ${prefix}pinter_
-_書 ${prefix}pintar_
-_書 ${prefix}asu_
-_書 ${prefix}bodoh_
-_書 ${prefix}gay_
-_書 ${prefix}lesby_
-_書 ${prefix}bajingan_
-_書 ${prefix}jancok_
-_書 ${prefix}anjing_
-_書 ${prefix}ngentod_
-_書 ${prefix}ngentot_
-_書 ${prefix}monyet_
-_書 ${prefix}mastah_
-_書 ${prefix}newbie_
-_書 ${prefix}bangsat_
-_書 ${prefix}bangke_
-_書 ${prefix}sange_
-_書 ${prefix}sangean_
-_書 ${prefix}dakjal_
-_書 ${prefix}horny_
-_書 ${prefix}wibu_
-_書 ${prefix}puki_
-_書 ${prefix}pantex_        
+_ダ ${prefix}popo_
+_ダ ${prefix}bego_
+_ダ ${prefix}tolol_
+_ダ ${prefix}pinter_
+_ダ ${prefix}pintar_
+_ダ ${prefix}asu_
+_ダ ${prefix}bodoh_
+_ダ ${prefix}gay_
+_ダ ${prefix}lesby_
+_ダ ${prefix}bajingan_
+_ダ ${prefix}jancok_
+_ダ ${prefix}anjing_
+_ダ ${prefix}ngentod_
+_ダ ${prefix}ngentot_
+_ダ ${prefix}monyet_
+_ダ ${prefix}mastah_
+_ダ ${prefix}newbie_
+_ダ ${prefix}bangsat_
+_ダ ${prefix}bangke_
+_ダ ${prefix}sange_
+_ダ ${prefix}sangean_
+_ダ ${prefix}dakjal_
+_ダ ${prefix}horny_
+_ダ ${prefix}wibu_
+_ダ ${prefix}puki_
+_ダ ${prefix}pantex_        
        
  `
-sendButLocation(from, `${menu}`, "*_© Yuki ゑ_*", {jpegThumbnail:ofrply1,name:""}, [{buttonId:`menu`,buttonText:{displayText:'BACK TO MENU'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
+sendButLocation(from, `${menu}`, "*_© Xavhier ゑ_*", {jpegThumbnail:ofrply1,name:""}, [{buttonId:`menu`,buttonText:{displayText:'BACK TO MENU'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
 }
 else if(menusimpel = true){
         stod = `${sender}`
@@ -1824,7 +1804,7 @@ fill =`Ohayoo ${pushname}, ${tampilUcapan}
 Silahkan Pilih Untuk Menampilkan Menu
 
 Jika Button Tidak Muncul Ketik .allmenu`
-menu =` Yuki ゑ`
+menu =` Xavhier ゑ`
 gbutsan = [
 {buttonId:`allmenu`,buttonText:{displayText:'SHOW MENU'},type:1},
 {buttonId:`store`,buttonText:{displayText:'STORE MENU'},type:1},
@@ -1864,49 +1844,46 @@ case 'downloadmenu':
                 stod = `${sender}`
        stst = await kurr.getStatus(`${sender.split('@')[0]}@c.us`)
 				stst = stst.status == 401 ? '' : stst.status
-				ini_result = await fetchJson('https://api.lolhuman.xyz/api/random/quotesnime?apikey=${lolkey}')
-     get_result = ini_result.result
-        ini_txt = `*${get_result.character} pernah berkata*\n\n`
-       ini_txt += `~${get_result.quote}`
+				
        
        menu = `*─❒ DOWNLOAD MENU*
-_書 ${prefix}wallml_
-_書 ${prefix}pinterest_
-_書 ${prefix}herolist_
-_書 ${prefix}herodetail [ _hero_ ]_
-_書 ${prefix}google [ _search_ ]_
-_書 ${prefix}gimage [ _search_ ]_
-_書 ${prefix}wiki [ _search_ ]_
-_書 ${prefix}mediafire [ _link_ ]_
-_書 ${prefix}ytsearch [ _judul_ ]_
-_書 ${prefix}ytmp4 [ _link yt_ ]_
-_書 ${prefix}ytmp3 [ _link yt_ ]_
-_書 ${prefix}play [ _judul lagu_ ]_
-_書 ${prefix}video [ _judul video_ ]_
-_書 ${prefix}tinyurl [ _link_ ]_
-_書 ${prefix}fetch [ _link_ ]_
-_書 ${prefix}igdl [ _link_ ]_
-_書 ${prefix}tiktokdl [ _link_ ]_
-_書 ${prefix}pinterest [ _search_ ]_
-_書 ${prefix}lirik [ _judul_ ]_
-_書 ${prefix}tourl [ _reply image/video_ ]_
-_書 ${prefix}kalkulator [ _angka_ ]_
-_書 ${prefix}translate [ _teks kodebhs_ ]_
-_書 ${prefix}ss [ _link_ ]_
-_書 ${prefix}playstore [ _search_ ]_
-_書 ${prefix}tiktokaudio [ _link_ ]_
-_書 ${prefix}brainly [ _search_ ]_
-_書 ${prefix}igstory [ _search_ ]_
-_書 ${prefix}igstalk [ _link_ ]_
-_書 ${prefix}twitter [ _link_ ]_
-_書 ${prefix}twmp3 [ _link_ ]_
-_書 ${prefix}linkwa [ _search_ ]_
-_書 ${prefix}chara [ _search_ ]_
-_書 ${prefix}otaku [ _search_ ]_
-_書 ${prefix}komiku [ _search_ ]_        
+_ダ ${prefix}wallml_
+_ダ ${prefix}pinterest_
+_ダ ${prefix}herolist_
+_ダ ${prefix}herodetail [ _hero_ ]_
+_ダ ${prefix}google [ _search_ ]_
+_ダ ${prefix}gimage [ _search_ ]_
+_ダ ${prefix}wiki [ _search_ ]_
+_ダ ${prefix}mediafire [ _link_ ]_
+_ダ ${prefix}ytsearch [ _judul_ ]_
+_ダ ${prefix}ytmp4 [ _link yt_ ]_
+_ダ ${prefix}ytmp3 [ _link yt_ ]_
+_ダ ${prefix}play [ _judul lagu_ ]_
+_ダ ${prefix}video [ _judul video_ ]_
+_ダ ${prefix}tinyurl [ _link_ ]_
+_ダ ${prefix}fetch [ _link_ ]_
+_ダ ${prefix}igdl [ _link_ ]_
+_ダ ${prefix}tiktokdl [ _link_ ]_
+_ダ ${prefix}pinterest [ _search_ ]_
+_ダ ${prefix}lirik [ _judul_ ]_
+_ダ ${prefix}tourl [ _reply image/video_ ]_
+_ダ ${prefix}kalkulator [ _angka_ ]_
+_ダ ${prefix}translate [ _teks kodebhs_ ]_
+_ダ ${prefix}ss [ _link_ ]_
+_ダ ${prefix}playstore [ _search_ ]_
+_ダ ${prefix}tiktokaudio [ _link_ ]_
+_ダ ${prefix}brainly [ _search_ ]_
+_ダ ${prefix}igstory [ _search_ ]_
+_ダ ${prefix}igstalk [ _link_ ]_
+_ダ ${prefix}twitter [ _link_ ]_
+_ダ ${prefix}twmp3 [ _link_ ]_
+_ダ ${prefix}linkwa [ _search_ ]_
+_ダ ${prefix}chara [ _search_ ]_
+_ダ ${prefix}otaku [ _search_ ]_
+_ダ ${prefix}komiku [ _search_ ]_        
        
  `
-sendButLocation(from, `${menu}`, "*_© Yuki ゑ_*", {jpegThumbnail:ofrply1,name:""}, [{buttonId:`menu`,buttonText:{displayText:'BACK TO MENU'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
+sendButLocation(from, `${menu}`, "*_© Xavhier ゑ_*", {jpegThumbnail:ofrply1,name:""}, [{buttonId:`menu`,buttonText:{displayText:'BACK TO MENU'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
 }
 else if(menusimpel = true){
         stod = `${sender}`
@@ -1914,7 +1891,7 @@ fill =`Ohayoo ${pushname}, ${tampilUcapan}
 Silahkan Pilih Untuk Menampilkan Menu
 
 Jika Button Tidak Muncul Ketik .allmenu`
-menu =` Yuki ゑ`
+menu =` Xavhier ゑ`
 gbutsan = [
 {buttonId:`allmenu`,buttonText:{displayText:'SHOW MENU'},type:1},
 {buttonId:`store`,buttonText:{displayText:'STORE MENU'},type:1},
@@ -1952,118 +1929,115 @@ case 'makermenu':
                 stod = `${sender}`
        stst = await kurr.getStatus(`${sender.split('@')[0]}@c.us`)
 				stst = stst.status == 401 ? '' : stst.status
-				ini_result = await fetchJson('https://api.lolhuman.xyz/api/random/quotesnime?apikey=${lolkey}')
-     get_result = ini_result.result
-        ini_txt = `*${get_result.character} pernah berkata*\n\n`
-       ini_txt += `~${get_result.quote}`
+				
        
        menu = `*─❒ MAKER MENU*
-_書 ${prefix}terbaikmaker teks/teks2_
-_書 ${prefix}bengekmaker teks/teks2_
-_書 ${prefix}memekertas teksnya_
-_書 ${prefix}blackpink teksnya_
-_書 ${prefix}neon teksnya_
-_書 ${prefix}greenneon teksnya_
-_書 ${prefix}advanceglow teksnya_
-_書 ${prefix}futureneon teksnya_
-_書 ${prefix}sandwriting teksnya_
-_書 ${prefix}sandsummer teksnya_
-_書 ${prefix}sandengraved teksnya_
-_書 ${prefix}metaldark teksnya_
-_書 ${prefix}neonlight teksnya_
-_書 ${prefix}holographic teksnya_
-_書 ${prefix}text1917 teksnya_
-_書 ${prefix}minion teksnya_
-_書 ${prefix}deluxesilver teksnya_
-_書 ${prefix}newyearcard teksnya_
-_書 ${prefix}bloodfrosted teksnya_
-_書 ${prefix}halloween teksnya_
-_書 ${prefix}jokerlogo teksnya_
-_書 ${prefix}fireworksparkle teksnya_
-_書 ${prefix}natureleaves teksnya_
-_書 ${prefix}bokeh teksnya_
-_書 ${prefix}toxic teksnya_
-_書 ${prefix}strawberry teksnya_
-_書 ${prefix}box3d teksnya_
-_書 ${prefix}roadwarning teksnya_
-_書 ${prefix}breakwall teksnya_
-_書 ${prefix}icecold teksnya_
-_書 ${prefix}luxury teksnya_
-_書 ${prefix}cloud teksnya_
-_書 ${prefix}summersand teksnya_
-_書 ${prefix}horrorblood teksnya_
-_書 ${prefix}thunder teksnya_
-_書 ${prefix}pornhub teksnya_
-_書 ${prefix}glitch teksnya_
-_書 ${prefix}avenger teksnya_
-_書 ${prefix}space teksnya_
-_書 ${prefix}ninjalogo teksnya_
-_書 ${prefix}marvelstudio teksnya_
-_書 ${prefix}lionlogo teksnya_
-_書 ${prefix}wolflogo teksnya_
-_書 ${prefix}steel3d teksnya_
-_書 ${prefix}wallgravity teksnya_
-_書 ${prefix}shadow teksnya_
-_書 ${prefix}cup teksnya_
-_書 ${prefix}cup1 teksnya_
-_書 ${prefix}romance teksnya_
-_書 ${prefix}smoke teksnya_
-_書 ${prefix}burnpaper teksnya_
-_書 ${prefix}lovemessage teksnya_
-_書 ${prefix}undergrass teksnya_
-_書 ${prefix}love teksnya_
-_書 ${prefix}coffe teksnya_
-_書 ${prefix}woodheart teksnya_
-_書 ${prefix}woodenboard teksnya_
-_書 ${prefix}summer3d teksnya_
-_書 ${prefix}wolfmetal teksnya_
-_書 ${prefix}nature3d teksnya_
-_書 ${prefix}underwater teksnya_
-_書 ${prefix}golderrose teksnya_
-_書 ${prefix}summernature teksnya_
-_書 ${prefix}letterleaves teksnya_
-_書 ${prefix}glowingneon teksnya_
-_書 ${prefix}fallleaves teksnya_
-_書 ${prefix}flamming teksnya_
-_書 ${prefix}harrypotter teksnya_
-_書 ${prefix}carvedwood teksnya_
-_書 ${prefix}arcade8bit teksnya_
-_書 ${prefix}battlefield4 teksnya_
-_書 ${prefix}pubg teksnya_
-_書 ${prefix}wetglass teksnya_
-_書 ${prefix}multicolor3d teksnya_
-_書 ${prefix}watercolor teksnya_
-_書 ${prefix}luxurygold teksnya_
-_書 ${prefix}galaxywallpaper teksnya_
-_書 ${prefix}lighttext teksnya_
-_書 ${prefix}beautifulflower teksnya_
-_書 ${prefix}puppycute teksnya_
-_書 ${prefix}royaltext teksnya_
-_書 ${prefix}heartshaped teksnya_
-_書 ${prefix}birthdaycake teksnya_
-_書 ${prefix}galaxystyle teksnya_
-_書 ${prefix}hologram3d teksnya_
-_書 ${prefix}greenneon teksnya_
-_書 ${prefix}glossychrome teksnya_
-_書 ${prefix}greenbush teksnya_
-_書 ${prefix}metallogo teksnya_
-_書 ${prefix}noeltext teksnya_
-_書 ${prefix}glittergold teksnya_
-_書 ${prefix}textcake teksnya_
-_書 ${prefix}starsnight teksnya_
-_書 ${prefix}wooden3d teksnya_
-_書 ${prefix}textbyname teksnya_
-_書 ${prefix}writegalacy teksnya_
-_書 ${prefix}galaxybat teksnya_
-_書 ${prefix}snow3d teksnya_
-_書 ${prefix}birthdayday teksnya_
-_書 ${prefix}goldplaybutton teksnya_
-_書 ${prefix}silverplaybutton teksnya_
-_書 ${prefix}freefire teksnya_
-_書 ${prefix}shadow teksnya_
+_ダ ${prefix}terbaikmaker teks/teks2_
+_ダ ${prefix}bengekmaker teks/teks2_
+_ダ ${prefix}memekertas teksnya_
+_ダ ${prefix}blackpink teksnya_
+_ダ ${prefix}neon teksnya_
+_ダ ${prefix}greenneon teksnya_
+_ダ ${prefix}advanceglow teksnya_
+_ダ ${prefix}futureneon teksnya_
+_ダ ${prefix}sandwriting teksnya_
+_ダ ${prefix}sandsummer teksnya_
+_ダ ${prefix}sandengraved teksnya_
+_ダ ${prefix}metaldark teksnya_
+_ダ ${prefix}neonlight teksnya_
+_ダ ${prefix}holographic teksnya_
+_ダ ${prefix}text1917 teksnya_
+_ダ ${prefix}minion teksnya_
+_ダ ${prefix}deluxesilver teksnya_
+_ダ ${prefix}newyearcard teksnya_
+_ダ ${prefix}bloodfrosted teksnya_
+_ダ ${prefix}halloween teksnya_
+_ダ ${prefix}jokerlogo teksnya_
+_ダ ${prefix}fireworksparkle teksnya_
+_ダ ${prefix}natureleaves teksnya_
+_ダ ${prefix}bokeh teksnya_
+_ダ ${prefix}toxic teksnya_
+_ダ ${prefix}strawberry teksnya_
+_ダ ${prefix}box3d teksnya_
+_ダ ${prefix}roadwarning teksnya_
+_ダ ${prefix}breakwall teksnya_
+_ダ ${prefix}icecold teksnya_
+_ダ ${prefix}luxury teksnya_
+_ダ ${prefix}cloud teksnya_
+_ダ ${prefix}summersand teksnya_
+_ダ ${prefix}horrorblood teksnya_
+_ダ ${prefix}thunder teksnya_
+_ダ ${prefix}pornhub teksnya_
+_ダ ${prefix}glitch teksnya_
+_ダ ${prefix}avenger teksnya_
+_ダ ${prefix}space teksnya_
+_ダ ${prefix}ninjalogo teksnya_
+_ダ ${prefix}marvelstudio teksnya_
+_ダ ${prefix}lionlogo teksnya_
+_ダ ${prefix}wolflogo teksnya_
+_ダ ${prefix}steel3d teksnya_
+_ダ ${prefix}wallgravity teksnya_
+_ダ ${prefix}shadow teksnya_
+_ダ ${prefix}cup teksnya_
+_ダ ${prefix}cup1 teksnya_
+_ダ ${prefix}romance teksnya_
+_ダ ${prefix}smoke teksnya_
+_ダ ${prefix}burnpaper teksnya_
+_ダ ${prefix}lovemessage teksnya_
+_ダ ${prefix}undergrass teksnya_
+_ダ ${prefix}love teksnya_
+_ダ ${prefix}coffe teksnya_
+_ダ ${prefix}woodheart teksnya_
+_ダ ${prefix}woodenboard teksnya_
+_ダ ${prefix}summer3d teksnya_
+_ダ ${prefix}wolfmetal teksnya_
+_ダ ${prefix}nature3d teksnya_
+_ダ ${prefix}underwater teksnya_
+_ダ ${prefix}golderrose teksnya_
+_ダ ${prefix}summernature teksnya_
+_ダ ${prefix}letterleaves teksnya_
+_ダ ${prefix}glowingneon teksnya_
+_ダ ${prefix}fallleaves teksnya_
+_ダ ${prefix}flamming teksnya_
+_ダ ${prefix}harrypotter teksnya_
+_ダ ${prefix}carvedwood teksnya_
+_ダ ${prefix}arcade8bit teksnya_
+_ダ ${prefix}battlefield4 teksnya_
+_ダ ${prefix}pubg teksnya_
+_ダ ${prefix}wetglass teksnya_
+_ダ ${prefix}multicolor3d teksnya_
+_ダ ${prefix}watercolor teksnya_
+_ダ ${prefix}luxurygold teksnya_
+_ダ ${prefix}galaxywallpaper teksnya_
+_ダ ${prefix}lighttext teksnya_
+_ダ ${prefix}beautifulflower teksnya_
+_ダ ${prefix}puppycute teksnya_
+_ダ ${prefix}royaltext teksnya_
+_ダ ${prefix}heartshaped teksnya_
+_ダ ${prefix}birthdaycake teksnya_
+_ダ ${prefix}galaxystyle teksnya_
+_ダ ${prefix}hologram3d teksnya_
+_ダ ${prefix}greenneon teksnya_
+_ダ ${prefix}glossychrome teksnya_
+_ダ ${prefix}greenbush teksnya_
+_ダ ${prefix}metallogo teksnya_
+_ダ ${prefix}noeltext teksnya_
+_ダ ${prefix}glittergold teksnya_
+_ダ ${prefix}textcake teksnya_
+_ダ ${prefix}starsnight teksnya_
+_ダ ${prefix}wooden3d teksnya_
+_ダ ${prefix}textbyname teksnya_
+_ダ ${prefix}writegalacy teksnya_
+_ダ ${prefix}galaxybat teksnya_
+_ダ ${prefix}snow3d teksnya_
+_ダ ${prefix}birthdayday teksnya_
+_ダ ${prefix}goldplaybutton teksnya_
+_ダ ${prefix}silverplaybutton teksnya_
+_ダ ${prefix}freefire teksnya_
+_ダ ${prefix}shadow teksnya_
        
  `
-sendButLocation(from, `${menu}`, "*_© Yuki ゑ_*", {jpegThumbnail:ofrply1,name:""}, [{buttonId:`menu`,buttonText:{displayText:'BACK TO MENU'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
+sendButLocation(from, `${menu}`, "*_© Xavhier ゑ_*", {jpegThumbnail:ofrply1,name:""}, [{buttonId:`menu`,buttonText:{displayText:'BACK TO MENU'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
 }
 else if(menusimpel = true){
         stod = `${sender}`
@@ -2071,7 +2045,7 @@ fill =`Ohayoo ${pushname}, ${tampilUcapan}
 Silahkan Pilih Untuk Menampilkan Menu
 
 Jika Button Tidak Muncul Ketik .allmenu`
-menu =` Yuki ゑ`
+menu =` Xavhier ゑ`
 gbutsan = [
 {buttonId:`allmenu`,buttonText:{displayText:'SHOW MENU'},type:1},
 {buttonId:`store`,buttonText:{displayText:'STORE MENU'},type:1},
@@ -2109,24 +2083,21 @@ case 'storagemenu':
                 stod = `${sender}`
        stst = await kurr.getStatus(`${sender.split('@')[0]}@c.us`)
 				stst = stst.status == 401 ? '' : stst.status
-				ini_result = await fetchJson('https://api.lolhuman.xyz/api/random/quotesnime?apikey=${lolkey}')
-     get_result = ini_result.result
-        ini_txt = `*${get_result.character} pernah berkata*\n\n`
-       ini_txt += `~${get_result.quote}`
+				
        
        menu = `*─❒ STORAGE MENU*
-_書 ${prefix}listimage_
-_書 ${prefix}liststicker_
-_書 ${prefix}listvn_
-_書 ${prefix}addsticker [ _nama_ ]_
-_書 ${prefix}delsticker [ _nama_ ]_
-_書 ${prefix}addvn [ _nama_ ]_
-_書 ${prefix}delvn [ _nama_ ]_
-_書 ${prefix}addimage [ _nama_ ]_
-_書 ${prefix}delimage [ _nama_ ]_        
+_ダ ${prefix}listimage_
+_ダ ${prefix}liststicker_
+_ダ ${prefix}listvn_
+_ダ ${prefix}addsticker [ _nama_ ]_
+_ダ ${prefix}delsticker [ _nama_ ]_
+_ダ ${prefix}addvn [ _nama_ ]_
+_ダ ${prefix}delvn [ _nama_ ]_
+_ダ ${prefix}addimage [ _nama_ ]_
+_ダ ${prefix}delimage [ _nama_ ]_        
        
  `
-sendButLocation(from, `${menu}`, "*_© Yuki ゑ_*", {jpegThumbnail:ofrply1,name:""}, [{buttonId:`menu`,buttonText:{displayText:'BACK TO MENU'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
+sendButLocation(from, `${menu}`, "*_© Xavhier ゑ_*", {jpegThumbnail:ofrply1,name:""}, [{buttonId:`menu`,buttonText:{displayText:'BACK TO MENU'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
 }
 else if(menusimpel = true){
         stod = `${sender}`
@@ -2134,7 +2105,7 @@ fill =`Ohayoo ${pushname}, ${tampilUcapan}
 Silahkan Pilih Untuk Menampilkan Menu
 
 Jika Button Tidak Muncul Ketik .allmenu`
-menu =` Yuki ゑ`
+menu =` Xavhier ゑ`
 gbutsan = [
 {buttonId:`allmenu`,buttonText:{displayText:'SHOW MENU'},type:1},
 {buttonId:`store`,buttonText:{displayText:'STORE MENU'},type:1},
@@ -2172,35 +2143,32 @@ case 'toolsmenu':
                 stod = `${sender}`
        stst = await kurr.getStatus(`${sender.split('@')[0]}@c.us`)
 				stst = stst.status == 401 ? '' : stst.status
-				ini_result = await fetchJson('https://api.lolhuman.xyz/api/random/quotesnime?apikey=${lolkey}')
-     get_result = ini_result.result
-        ini_txt = `*${get_result.character} pernah berkata*\n\n`
-       ini_txt += `~${get_result.quote}`
+				
        
        menu = `*─❒ TOOLS*
-_書 ${prefix}nulis teksnya_
-_書 ${prefix}sticker_
-_書 ${prefix}stickertelegram [ _NAMA STICKER_ ]_
-_書 ${prefix}stickerwm [ _nama|author_ ]_
-_書 ${prefix}dadu_
-_書 ${prefix}semoji [ _emoji_ ]_
-_書 ${prefix}attp [ _teks_ ]_
-_書 ${prefix}ttp [ _teks_ ]_
-_書 ${prefix}ttp2 [ _teks_ ]_
-_書 ${prefix}ttp3 [ _teks_ ]_
-_書 ${prefix}ttp4 [ _teks_ ]_
-_書 ${prefix}toimg_
-_書 ${prefix}tomp3 [ _reply video_ ]_
-_書 ${prefix}togif [ _reply sticker gif_ ]_
-_書 ${prefix}robot [ _reply audio_ ]_
-_書 ${prefix}balik [ _reply audio_ ]_
-_書 ${prefix}bass [ _reply audio_ ]_
-_書 ${prefix}gemuk [ _reply audio_ ]_
-_書 ${prefix}detikvn [ _reply audio caption angka_ ]_
-_書 ${prefix}detikvideo [ _reply video caption angka_ ]_        
+_ダ ${prefix}nulis teksnya_
+_ダ ${prefix}sticker_
+_ダ ${prefix}stickertelegram [ _NAMA STICKER_ ]_
+_ダ ${prefix}stickerwm [ _nama|author_ ]_
+_ダ ${prefix}dadu_
+_ダ ${prefix}semoji [ _emoji_ ]_
+_ダ ${prefix}attp [ _teks_ ]_
+_ダ ${prefix}ttp [ _teks_ ]_
+_ダ ${prefix}ttp2 [ _teks_ ]_
+_ダ ${prefix}ttp3 [ _teks_ ]_
+_ダ ${prefix}ttp4 [ _teks_ ]_
+_ダ ${prefix}toimg_
+_ダ ${prefix}tomp3 [ _reply video_ ]_
+_ダ ${prefix}togif [ _reply sticker gif_ ]_
+_ダ ${prefix}robot [ _reply audio_ ]_
+_ダ ${prefix}balik [ _reply audio_ ]_
+_ダ ${prefix}bass [ _reply audio_ ]_
+_ダ ${prefix}gemuk [ _reply audio_ ]_
+_ダ ${prefix}detikvn [ _reply audio caption angka_ ]_
+_ダ ${prefix}detikvideo [ _reply video caption angka_ ]_        
        
  `
-sendButLocation(from, `${menu}`, "*_© Yuki ゑ_*", {jpegThumbnail:ofrply1,name:""}, [{buttonId:`menu`,buttonText:{displayText:'BACK TO MENU'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
+sendButLocation(from, `${menu}`, "*_© Xavhier ゑ_*", {jpegThumbnail:ofrply1,name:""}, [{buttonId:`menu`,buttonText:{displayText:'BACK TO MENU'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
 }
 else if(menusimpel = true){
         stod = `${sender}`
@@ -2208,7 +2176,7 @@ fill =`Ohayoo ${pushname}, ${tampilUcapan}
 Silahkan Pilih Untuk Menampilkan Menu
 
 Jika Button Tidak Muncul Ketik .allmenu`
-menu =` Yuki ゑ`
+menu =` Xavhier ゑ`
 gbutsan = [
 {buttonId:`allmenu`,buttonText:{displayText:'SHOW MENU'},type:1},
 {buttonId:`store`,buttonText:{displayText:'STORE MENU'},type:1},
@@ -2246,43 +2214,40 @@ case 'wibumenu':
                 stod = `${sender}`
        stst = await kurr.getStatus(`${sender.split('@')[0]}@c.us`)
 				stst = stst.status == 401 ? '' : stst.status
-				ini_result = await fetchJson('https://api.lolhuman.xyz/api/random/quotesnime?apikey=${lolkey}')
-     get_result = ini_result.result
-        ini_txt = `*${get_result.character} pernah berkata*\n\n`
-       ini_txt += `~${get_result.quote}`
+				
        
        menu = `*─❒ WIBU MENU*
-_書 ${prefix}zoro_ 
-_書 ${prefix}luffy_ 
-_書 ${prefix}sanji_ 
-_書 ${prefix}ussop_ 
-_書 ${prefix}nami_ 
-_書 ${prefix}copper_ 
-_書 ${prefix}naruto_ 
-_書 ${prefix}minato_ 
-_書 ${prefix}sasuke_ 
-_書 ${prefix}sakura_ 
-_書 ${prefix}boruto_ 
-_書 ${prefix}sarada_ 
-_書 ${prefix}mitsuki_ 
-_書 ${prefix}orochimaru_ 
-_書 ${prefix}tsunade_ 
-_書 ${prefix}kakashi_ 
-_書 ${prefix}killua_ 
-_書 ${prefix}gon_ 
-_書 ${prefix}saitama_ 
-_書 ${prefix}rimuru_ 
-_書 ${prefix}natsu_ 
-_書 ${prefix}tanjirou_ 
-_書 ${prefix}nezuko_ 
-_書 ${prefix}senku_   
-_書 ${prefix}loli_
-_書 ${prefix}husbu_
-_書 ${prefix}milf_
-_書 ${prefix}cosplay_        
+_ダ ${prefix}zoro_ 
+_ダ ${prefix}luffy_ 
+_ダ ${prefix}sanji_ 
+_ダ ${prefix}ussop_ 
+_ダ ${prefix}nami_ 
+_ダ ${prefix}copper_ 
+_ダ ${prefix}naruto_ 
+_ダ ${prefix}minato_ 
+_ダ ${prefix}sasuke_ 
+_ダ ${prefix}sakura_ 
+_ダ ${prefix}boruto_ 
+_ダ ${prefix}sarada_ 
+_ダ ${prefix}mitsuki_ 
+_ダ ${prefix}orochimaru_ 
+_ダ ${prefix}tsunade_ 
+_ダ ${prefix}kakashi_ 
+_ダ ${prefix}killua_ 
+_ダ ${prefix}gon_ 
+_ダ ${prefix}saitama_ 
+_ダ ${prefix}rimuru_ 
+_ダ ${prefix}natsu_ 
+_ダ ${prefix}tanjirou_ 
+_ダ ${prefix}nezuko_ 
+_ダ ${prefix}senku_   
+_ダ ${prefix}loli_
+_ダ ${prefix}husbu_
+_ダ ${prefix}milf_
+_ダ ${prefix}cosplay_        
        
  `
-sendButLocation(from, `${menu}`, "*_© Yuki ゑ_*", {jpegThumbnail:ofrply1,name:""}, [{buttonId:`menu`,buttonText:{displayText:'BACK TO MENU'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
+sendButLocation(from, `${menu}`, "*_© Xavhier ゑ_*", {jpegThumbnail:ofrply1,name:""}, [{buttonId:`menu`,buttonText:{displayText:'BACK TO MENU'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
 }
 else if(menusimpel = true){
         stod = `${sender}`
@@ -2290,7 +2255,7 @@ fill =`Ohayoo ${pushname}, ${tampilUcapan}
 Silahkan Pilih Untuk Menampilkan Menu
 
 Jika Button Tidak Muncul Ketik .allmenu`
-menu =` Yuki ゑ`
+menu =` Xavhier ゑ`
 gbutsan = [
 {buttonId:`allmenu`,buttonText:{displayText:'SHOW MENU'},type:1},
 {buttonId:`store`,buttonText:{displayText:'STORE MENU'},type:1},
@@ -2328,86 +2293,83 @@ case 'harammenu':
                 stod = `${sender}`
        stst = await kurr.getStatus(`${sender.split('@')[0]}@c.us`)
 				stst = stst.status == 401 ? '' : stst.status
-				ini_result = await fetchJson('https://api.lolhuman.xyz/api/random/quotesnime?apikey=${lolkey}')
-     get_result = ini_result.result
-        ini_txt = `*${get_result.character} pernah berkata*\n\n`
-       ini_txt += `~${get_result.quote}`
+				
        
        menu = `*─❒ MENU HARAM*
-_書 ${prefix}bokep_
-_書 ${prefix}neko_
-_書 ${prefix}kanna_
-_書 ${prefix}sagiri_
-_書 ${prefix}megumin_
-_書 ${prefix}wallnime_
-_書 ${prefix}ass_
-_書 ${prefix}ahegao_
-_書 ${prefix}hentai_
-_書 ${prefix}yuri_
-_書 ${prefix}panties_
-_書 ${prefix}neko_
-_書 ${prefix}chiisaihentai_
-_書 ${prefix}trap_
-_書 ${prefix}blowjob_
-_書 ${prefix}yaoi_
-_書 ${prefix}ecchi_
-_書 ${prefix}ahegao_
-_書 ${prefix}hololewd_
-_書 ${prefix}sideoppai_
-_書 ${prefix}animefeets_
-_書 ${prefix}animebooty_
-_書 ${prefix}animethighss_
-_書 ${prefix}hentaiparadise_
-_書 ${prefix}animearmpits_
-_書 ${prefix}hentaifemdom_
-_書 ${prefix}lewdanimegirls_
-_書 ${prefix}biganimetiddies_
-_書 ${prefix}animebellybutton_
-_書 ${prefix}hentai4everyone_
-_書 ${prefix}bj_
-_書 ${prefix}ero_
-_書 ${prefix}cum_
-_書 ${prefix}feet_
-_書 ${prefix}yuri_
-_書 ${prefix}trap_
-_書 ${prefix}lewd_
-_書 ${prefix}feed_
-_書 ${prefix}eron_
-_書 ${prefix}solo_
-_書 ${prefix}gasm_
-_書 ${prefix}poke_
-_書 ${prefix}anal_
-_書 ${prefix}holo_
-_書 ${prefix}tits_
-_書 ${prefix}kuni_
-_書 ${prefix}kiss_
-_書 ${prefix}erok_
-_書 ${prefix}smug_
-_書 ${prefix}baka_
-_書 ${prefix}solog_
-_書 ${prefix}feetg_
-_書 ${prefix}lewdk_
-_書 ${prefix}waifu_
-_書 ${prefix}pussy_
-_書 ${prefix}femdom_
-_書 ${prefix}cuddle_
-_書 ${prefix}eroyuri_
-_書 ${prefix}cum_jpg_
-_書 ${prefix}blowjob_
-_書 ${prefix}erofeet_
-_書 ${prefix}holoero_
-_書 ${prefix}classic_
-_書 ${prefix}erokemo_
-_書 ${prefix}fox_girl_
-_書 ${prefix}futanari_
-_書 ${prefix}lewdkemo_
-_書 ${prefix}wallpaper_
-_書 ${prefix}pussy_jpg_
-_書 ${prefix}kemonomimi_
-_書 ${prefix}nsfw_avatar_        
+_ダ ${prefix}bokep_
+_ダ ${prefix}neko_
+_ダ ${prefix}kanna_
+_ダ ${prefix}sagiri_
+_ダ ${prefix}megumin_
+_ダ ${prefix}wallnime_
+_ダ ${prefix}ass_
+_ダ ${prefix}ahegao_
+_ダ ${prefix}hentai_
+_ダ ${prefix}yuri_
+_ダ ${prefix}panties_
+_ダ ${prefix}neko_
+_ダ ${prefix}chiisaihentai_
+_ダ ${prefix}trap_
+_ダ ${prefix}blowjob_
+_ダ ${prefix}yaoi_
+_ダ ${prefix}ecchi_
+_ダ ${prefix}ahegao_
+_ダ ${prefix}hololewd_
+_ダ ${prefix}sideoppai_
+_ダ ${prefix}animefeets_
+_ダ ${prefix}animebooty_
+_ダ ${prefix}animethighss_
+_ダ ${prefix}hentaiparadise_
+_ダ ${prefix}animearmpits_
+_ダ ${prefix}hentaifemdom_
+_ダ ${prefix}lewdanimegirls_
+_ダ ${prefix}biganimetiddies_
+_ダ ${prefix}animebellybutton_
+_ダ ${prefix}hentai4everyone_
+_ダ ${prefix}bj_
+_ダ ${prefix}ero_
+_ダ ${prefix}cum_
+_ダ ${prefix}feet_
+_ダ ${prefix}yuri_
+_ダ ${prefix}trap_
+_ダ ${prefix}lewd_
+_ダ ${prefix}feed_
+_ダ ${prefix}eron_
+_ダ ${prefix}solo_
+_ダ ${prefix}gasm_
+_ダ ${prefix}poke_
+_ダ ${prefix}anal_
+_ダ ${prefix}holo_
+_ダ ${prefix}tits_
+_ダ ${prefix}kuni_
+_ダ ${prefix}kiss_
+_ダ ${prefix}erok_
+_ダ ${prefix}smug_
+_ダ ${prefix}baka_
+_ダ ${prefix}solog_
+_ダ ${prefix}feetg_
+_ダ ${prefix}lewdk_
+_ダ ${prefix}waifu_
+_ダ ${prefix}pussy_
+_ダ ${prefix}femdom_
+_ダ ${prefix}cuddle_
+_ダ ${prefix}eroyuri_
+_ダ ${prefix}cum_jpg_
+_ダ ${prefix}blowjob_
+_ダ ${prefix}erofeet_
+_ダ ${prefix}holoero_
+_ダ ${prefix}classic_
+_ダ ${prefix}erokemo_
+_ダ ${prefix}fox_girl_
+_ダ ${prefix}futanari_
+_ダ ${prefix}lewdkemo_
+_ダ ${prefix}wallpaper_
+_ダ ${prefix}pussy_jpg_
+_ダ ${prefix}kemonomimi_
+_ダ ${prefix}nsfw_avatar_        
        
  `
-sendButLocation(from, `${menu}`, "*_© Yuki ゑ_*", {jpegThumbnail:ofrply1,name:""}, [{buttonId:`menu`,buttonText:{displayText:'BACK TO MENU'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
+sendButLocation(from, `${menu}`, "*_© Xavhier ゑ_*", {jpegThumbnail:ofrply1,name:""}, [{buttonId:`menu`,buttonText:{displayText:'BACK TO MENU'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
 }
 else if(menusimpel = true){
         stod = `${sender}`
@@ -2415,7 +2377,7 @@ fill =`Ohayoo ${pushname}, ${tampilUcapan}
 Silahkan Pilih Untuk Menampilkan Menu
 
 Jika Button Tidak Muncul Ketik .allmenu`
-menu =` Yuki ゑ`
+menu =` Xavhier ゑ`
 gbutsan = [
 {buttonId:`allmenu`,buttonText:{displayText:'SHOW MENU'},type:1},
 {buttonId:`store`,buttonText:{displayText:'STORE MENU'},type:1},
@@ -2453,17 +2415,14 @@ case 'gamemenu':
                 stod = `${sender}`
        stst = await kurr.getStatus(`${sender.split('@')[0]}@c.us`)
 				stst = stst.status == 401 ? '' : stst.status
-				ini_result = await fetchJson('https://api.lolhuman.xyz/api/random/quotesnime?apikey=${lolkey}')
-     get_result = ini_result.result
-        ini_txt = `*${get_result.character} pernah berkata*\n\n`
-       ini_txt += `~${get_result.quote}`
+				
        
        menu = `*─❒GAME MENU*
-_書 ${prefix}tebakgambar_
-_書 ${prefix}caklontong_        
+_ダ ${prefix}tebakgambar_
+_ダ ${prefix}caklontong_        
        
  `
-sendButLocation(from, `${menu}`, "*_© Yuki ゑ_*", {jpegThumbnail:ofrply1,name:""}, [{buttonId:`menu`,buttonText:{displayText:'BACK TO MENU'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
+sendButLocation(from, `${menu}`, "*_© Xavhier ゑ_*", {jpegThumbnail:ofrply1,name:""}, [{buttonId:`menu`,buttonText:{displayText:'BACK TO MENU'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
 }
 else if(menusimpel = true){
         stod = `${sender}`
@@ -2471,7 +2430,7 @@ fill =`Ohayoo ${pushname}, ${tampilUcapan}
 Silahkan Pilih Untuk Menampilkan Menu
 
 Jika Button Tidak Muncul Ketik .allmenu`
-menu =` Yuki ゑ`
+menu =` Xavhier ゑ`
 gbutsan = [
 {buttonId:`allmenu`,buttonText:{displayText:'SHOW MENU'},type:1},
 {buttonId:`store`,buttonText:{displayText:'STORE MENU'},type:1},
@@ -2509,43 +2468,40 @@ case 'othermenu':
                 stod = `${sender}`
        stst = await kurr.getStatus(`${sender.split('@')[0]}@c.us`)
 				stst = stst.status == 401 ? '' : stst.status
-				ini_result = await fetchJson('https://api.lolhuman.xyz/api/random/quotesnime?apikey=${lolkey}')
-     get_result = ini_result.result
-        ini_txt = `*${get_result.character} pernah berkata*\n\n`
-       ini_txt += `~${get_result.quote}`
+				
        
        menu = `*─❒ OTHER MENU*
-_書 ${prefix}cogan_ 
-_書 ${prefix}cecan_ 
-_書 ${prefix}meme_ 
-_書 ${prefix}darkjoke_
-_書 ${prefix}memeindo_
-_書 ${prefix}asupan_
-_書 ${prefix}quotes_
-_書 ${prefix}rate_
-_書 ${prefix}kapankah_
-_書 ${prefix}apakah_
-_書 ${prefix}bisakah_
-_書 ${prefix}caripesan [ _teks|jumlah_ ]_
-_書 ${prefix}slots_
-_書 ${prefix}suit [ _gunting/batu/kertas_ ]_
-_書 ${prefix}tag [ _nomor_ ]_
-_書 ${prefix}tagme_
-_書 ${prefix}tts [ _kodebhs teks_ ]_
-_書 ${prefix}readmore [ _teks1|teks2_ ]_
-_書 ${prefix}fitnahpc [ _nomor|teks1|teks2_ ]_
-_書 ${prefix}chat [ _nomor|teks_ ]_
-_書 ${prefix}fdeface [ _replyimg link|teks1|teks2_ ]_
-_書 ${prefix}listgrup_
-_書 ${prefix}baileys [ _reply message_ ]_
-_書 ${prefix}q [ _reply message_ ]_
-_書 ${prefix}getcaption [ _reply message_ ]_
-_書 ${prefix}tospam [ _reply audio/sticker/image|jumlah_ ]_
-_書 ${prefix}sharelock [ _teks1|teks2_ ]_
+_ダ ${prefix}cogan_ 
+_ダ ${prefix}cecan_ 
+_ダ ${prefix}meme_ 
+_ダ ${prefix}darkjoke_
+_ダ ${prefix}memeindo_
+_ダ ${prefix}asupan_
+_ダ ${prefix}quotes_
+_ダ ${prefix}rate_
+_ダ ${prefix}kapankah_
+_ダ ${prefix}apakah_
+_ダ ${prefix}bisakah_
+_ダ ${prefix}caripesan [ _teks|jumlah_ ]_
+_ダ ${prefix}slots_
+_ダ ${prefix}suit [ _gunting/batu/kertas_ ]_
+_ダ ${prefix}tag [ _nomor_ ]_
+_ダ ${prefix}tagme_
+_ダ ${prefix}tts [ _kodebhs teks_ ]_
+_ダ ${prefix}readmore [ _teks1|teks2_ ]_
+_ダ ${prefix}fitnahpc [ _nomor|teks1|teks2_ ]_
+_ダ ${prefix}chat [ _nomor|teks_ ]_
+_ダ ${prefix}fdeface [ _replyimg link|teks1|teks2_ ]_
+_ダ ${prefix}listgrup_
+_ダ ${prefix}baileys [ _reply message_ ]_
+_ダ ${prefix}q [ _reply message_ ]_
+_ダ ${prefix}getcaption [ _reply message_ ]_
+_ダ ${prefix}tospam [ _reply audio/sticker/image|jumlah_ ]_
+_ダ ${prefix}sharelock [ _teks1|teks2_ ]_
         
        
  `
-sendButLocation(from, `${menu}`, "*_© Yuki ゑ_*", {jpegThumbnail:ofrply1,name:""}, [{buttonId:`menu`,buttonText:{displayText:'BACK TO MENU'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
+sendButLocation(from, `${menu}`, "*_© Xavhier ゑ_*", {jpegThumbnail:ofrply1,name:""}, [{buttonId:`menu`,buttonText:{displayText:'BACK TO MENU'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
 }
 else if(menusimpel = true){
         stod = `${sender}`
@@ -2553,7 +2509,7 @@ fill =`Ohayoo ${pushname}, ${tampilUcapan}
 Silahkan Pilih Untuk Menampilkan Menu
 
 Jika Button Tidak Muncul Ketik .allmenu`
-menu =` Yuki ゑ`
+menu =` Xavhier ゑ`
 gbutsan = [
 {buttonId:`allmenu`,buttonText:{displayText:'SHOW MENU'},type:1},
 {buttonId:`store`,buttonText:{displayText:'STORE MENU'},type:1},
@@ -2581,13 +2537,7 @@ sendEphemeral: false,
 break
 case 'bokep':
 try{
-  ini_txt = ` وَلَا تَقْرَبُوا۟ ٱلزِّنَىٰٓ ۖ إِنَّهُۥ كَانَ فَٰحِشَةً وَسَآءَ سَبِيلً
-
-
-Artinya: "Dan janganlah kamu mendekati zina, sesungguhnya zina adalah suatu perbuatan yang keji. Dan suatu jalan yang buruk." (QS. Al-Isra: 32).
-
-Baca artikel detiknews, "Surat Al-Isra Ayat 32, Tentang Larangan Mendekati Zina"`
-  if (!isOwner && !mek.key.fromMe) return reply(ini_txt)             
+               
 boks = Date.now();
 bok = await scrapper.pornvid()
 bokt = `BOKEP
@@ -2653,10 +2603,7 @@ case 'info':
                 stod = `${sender}`
        stst = await kurr.getStatus(`${sender.split('@')[0]}@c.us`)
 				stst = stst.status == 401 ? '' : stst.status
-				ini_result = await fetchJson('https://api.lolhuman.xyz/api/random/quotesnime?apikey=${lolkey}')
-     get_result = ini_result.result
-        ini_txt = `*${get_result.character} pernah berkata*\n\n`
-       ini_txt += `~${get_result.quote}`
+				
        
        menu = `『 BOT INFO 』
 
@@ -2674,7 +2621,7 @@ _ℒ⃝👨‍💻 Name Creator : KurrXd_
 JASA HOSTING BOT
 _kurrxdstore.xyz_
 `
-sendButLocation(from, `${menu}`, "*_© Yuki ゑ_*", {jpegThumbnail:ofrply1,name:""}, [{buttonId:`store`,buttonText:{displayText:'STORE BOT'},type:1},{buttonId:`speed`,buttonText:{displayText:'SPEED BOT'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
+sendButLocation(from, `${menu}`, "*_© Xavhier ゑ_*", {jpegThumbnail:ofrply1,name:""}, [{buttonId:`store`,buttonText:{displayText:'STORE BOT'},type:1},{buttonId:`speed`,buttonText:{displayText:'SPEED BOT'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
 }
 else if(menusimpel = true){
         stod = `${sender}`
@@ -2682,7 +2629,7 @@ fill =`Ohayoo ${pushname}, ${tampilUcapan}
 Silahkan Pilih Untuk Menampilkan Menu
 
 Jika Button Tidak Muncul Ketik .allmenu`
-menu =` Yuki ゑ`
+menu =` Xavhier ゑ`
 gbutsan = [
 {buttonId:`allmenu`,buttonText:{displayText:'SHOW MENU'},type:1},
 {buttonId:`store`,buttonText:{displayText:'STORE MENU'},type:1},
@@ -2740,93 +2687,12 @@ case 'bego':
         membr.push(goo.jid)
         mentions(teks, membr, true)
         break
-case 'catlog': 
 
-
-                nama = ' ゑwelcome to kurrxd storeゑ '
-       ownerJid = "6281220670449@s.whatsapp.net"
-                nomor = 1
-                stod = `${sender}`
-       stst = await kurr.getStatus(`${sender.split('@')[0]}@c.us`)
-				stst = stst.status == 401 ? '' : stst.status
-       menunya = `*KurrXd Melayani Jasa Pembuatan Vps/Rdp*
-*Jasa Run Bot/ Hosting Bot*
-*Dengan Harga Terjangkau*
-*_List Harga Rdp_*
-RAM 2GB CPU 1 = 20K
-
-RAM 4GB CPU 2 = 40K
-
-RAM 8GB CPU 4 = 80k
-GARANSI 2 MINGGU SETELAH PEMBAYARAN
-
-INFO/SARAN: JANGAN BELI RAM 2GB
-JIKA UNTUK KEBUTUHAN BOT KARNA BISA
-MENYEBAB KAN OVERLOAD
-
-OVERLOAD= NO GARANSI
-*_List Harga Vps_*
-Ram 2 Cpu 1 Expire 1 Tahun = 54k
-
-*GARANSI 3BULAN SETELAH PEMBAYARAN*
-
-KHUSUS VPS JANGAN PAKSA BUAT JASA RUN BOT
-INGET RAM2 BUKAN BUAT BANYAK BOT 1 AJA
-KALO TERJADI SESUATU YANG TIDAK MEMUNGKINKAN
-KAMI TIDAK BERTANGGUNG JAWAB
-
-MINAT KETIK .owner`
-if(menuall == false){
-   //Masih langka
-anu = kurr.prepareMessageFromContent(from,{
-					"productMessage": {
-						"product": {
-								"productImage": {
-								"url": "https://mmg.whatsapp.net/d/f/Au9n7y-3XR4R0WUNdcQNNM2_mMcYLdVQQP9NkcG2sI-D.enc",
-						"mimetype": "image/jpeg",
-						"fileSha256": "ebKk5FKDC/fSbQKa4bmQ+EHbDZ/rqi78a+eYm4Z3TfQ=",
-						"fileLength": "20040",
-						"height": 390,
-						"width": 390,
-						"mediaKey": "+k8is4MAgrumDtQJQYfXtfN/haBmhmr4j4OKpM0Vl04=",
-						"fileEncSha256": "yu+xoTWjIR6UHVqdGNPINUyn6s50B+wDeZorjX1DP14=",
-						"jpegThumbnail": fs.readFileSync("./logonya.jpeg")
-                                },
-                            "productId": "9999999",
-							"title": `${nama}`, 
-							"description": `${menunya}`,
-							"productImageCount": 1
-						},
-						"businessOwnerJid": `${ownerJid}`,
-						"contextInfo": {
-							"forwardingScore": 9999,
-							"isForwarded": true
-						}
-					}
-				},{quoted: ftrol, contextInfo: { mentionedJid: [dtod,otod,stod]}})
-                  kurr.relayWAMessage(anu)
-                  } else if(menuall = true){
-gbutsan = [
-{buttonId:`owner`,buttonText:{displayText:'OWNER'},type:1},
-{buttonId:`donasi`,buttonText:{displayText:'DONASI'},type:1},
-{buttonId:`script`,buttonText:{displayText:'SEWABOT'},type:1}
-]
-mhan = await kurr.prepareMessage(from, pporigi, image, {thumbnail: pporigi})
-const btnBngsat = {
-imageMessage: mhan.message.imageMessage,
-contentText: `${menunya}`,
-footerText: `Yuki ゑ`,
-buttons: gbutsan,
-headerType: 4
-}
-kurr.sendMessage(from, btnBngsat, MessageType.buttonsMessage, { quoted: ftrol, caption: menunya, contextInfo: { mentionedJid: [dtod,otod,stod]}})
-                  }
-break
         case 'store':
         stod = `${sender}`
  listMsg = {
  buttonText: 'LIST STORE',
- footerText: '*_© Yuki ゑ_*',
+ footerText: '*_© Xavhier ゑ_*',
  description: `Ohayoo @${stod.split('@')[0]}, Silahkan Mau Beli Apa Kak...`,
  sections: [
                      {
@@ -2871,10 +2737,7 @@ case 'jasasewa':
                 stod = `${sender}`
        stst = await kurr.getStatus(`${sender.split('@')[0]}@c.us`)
 				stst = stst.status == 401 ? '' : stst.status
-				ini_result = await fetchJson('https://api.lolhuman.xyz/api/random/quotesnime?apikey=${lolkey}')
-     get_result = ini_result.result
-        ini_txt = `*${get_result.character} pernah berkata*\n\n`
-       ini_txt += `~${get_result.quote}`
+				
        
        menu = ` 𝗢𝗣𝗘𝗡 𝗦𝗘𝗪𝗔𝗕𝗢𝗧
  -ＫｕｒｒＸｄ-
@@ -2909,7 +2772,7 @@ fill =`Ohayoo ${pushname}, ${tampilUcapan}
 Silahkan Pilih Untuk Menampilkan Menu
 
 Jika Button Tidak Muncul Ketik .allmenu`
-menu =` Yuki ゑ`
+menu =` Xavhier ゑ`
 gbutsan = [
 {buttonId:`allmenu`,buttonText:{displayText:'SHOW MENU'},type:1},
 {buttonId:`store`,buttonText:{displayText:'STORE MENU'},type:1},
@@ -2947,10 +2810,7 @@ case 'jasa':
                 stod = `${sender}`
        stst = await kurr.getStatus(`${sender.split('@')[0]}@c.us`)
 				stst = stst.status == 401 ? '' : stst.status
-				ini_result = await fetchJson('https://api.lolhuman.xyz/api/random/quotesnime?apikey=${lolkey}')
-     get_result = ini_result.result
-        ini_txt = `*${get_result.character} pernah berkata*\n\n`
-       ini_txt += `~${get_result.quote}`
+				
        
        menu = ` 𝙅𝘼𝙎𝘼 𝙄𝙉𝙎𝙏𝘼𝙇𝙇 𝘽𝙊𝙏
  -ＫｕｒｒＸｄ-
@@ -2977,7 +2837,7 @@ fill =`Ohayoo ${pushname}, ${tampilUcapan}
 Silahkan Pilih Untuk Menampilkan Menu
 
 Jika Button Tidak Muncul Ketik .allmenu`
-menu =` Yuki ゑ`
+menu =` Xavhier ゑ`
 gbutsan = [
 {buttonId:`allmenu`,buttonText:{displayText:'SHOW MENU'},type:1},
 {buttonId:`store`,buttonText:{displayText:'STORE MENU'},type:1},
@@ -3019,7 +2879,7 @@ const serialUser = createSerial(18)
 └❏
 
 JANGAN LUPA JOIN GC : https://chat.whatsapp.com/K8V89lh8XFDBgkkZxa59tw
-*「 Yuki ゑ 」*`
+*「 Xavhier ゑ 」*`
 gbutsan = [
 {buttonId:`menu`,buttonText:{displayText:'MENU'},type:1},
 {buttonId:`donasi`,buttonText:{displayText:'DONASI'},type:1}
@@ -3778,7 +3638,7 @@ anu =`Silahkan pilih salah satu di bawah`
  buttons = [{buttonId: 'setmenu ori', buttonText: {displayText: 'ORI'}, type: 1},{buttonId: 'setmenu simpel', buttonText: {displayText: 'SIMPEL'}, type: 1}]
 const skuygelud = {
     contentText: `${anu}`,
-    footerText: '*_Yuki _*',
+    footerText: '*_Xavhier _*',
     buttons: buttons,
     headerType: 1
 }
@@ -3798,7 +3658,7 @@ anu =`Silahkan pilih salah satu di bawah`
  buttons = [{buttonId: 'setallmenu ori', buttonText: {displayText: 'ORI'}, type: 1},{buttonId: 'setallmenu simpel', buttonText: {displayText: 'SIMPEL'}, type: 1}]
 const skuygf = {
     contentText: `${anu}`,
-    footerText: '*_Yuki _*',
+    footerText: '*_Xavhier _*',
     buttons: buttons,
     headerType: 1
 }
@@ -3825,12 +3685,12 @@ let ini_list = []
 for (let i of ownerNumber) {
 const vname = kurr.contacts[i] != undefined ? kurr.contacts[i].vname || kurr.contacts[i].notify : undefined
 ini_list.push({
-"displayName": `Developer Yuki ゑ`,
+"displayName": `Developer Xavhier ゑ`,
 "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;${NamaOwner};;;\nFN:${vname ? `${vname}` : `${NamaOwner}`}\nitem1.TEL;waid=${NomorOwner}:${NomorOwner2}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`
 })
 }
 kurr.sendMessage(from, {
-"displayName": `Developer Yuki ゑ`,
+"displayName": `Developer Xavhier ゑ`,
 "contacts": ini_list 
 }, 'contactsArrayMessage', { quoted: mek, contextInfo: { forwardingScore: 508, isForwarded: true }})
 break
@@ -3872,7 +3732,7 @@ await kurr.sendMessage(from, gifnya, MessageType.video, {mimetype : 'video/mp4',
 break
 case 'script':
 case 'sc':
-reply(`SC INI:\nhttps://github.com/KurrXd/Yuki-Bot\nSC KHUSUS JUALAN:\nhttps://github.com/KurrXd/Store-Botz\nMONGGO DIPAKAI`)
+reply(`SC? Wkwkwkkw`)
 break
 
 
@@ -3897,7 +3757,7 @@ doni =`*DONATE NYA KAKA*
 ╭─❒ 「 Donasi 」 ──────*
 *│*
 *│*⬡ *Mau donasi apa cuma liat doang?*
-*│*⬡ *PULSA     : 082298891772*
+*│*⬡ *PULSA     : 081220670449*
 *│*⬡ *DANA    : 081220670449*
 *│*⬡ *GOPAY    : SCAN DI ATAS AJA*
 *└───────────────────*
@@ -3929,11 +3789,7 @@ DAN KIRIM BUKTI TF KE KONTAK TERSEBUT
 sendButLocation(from, `${menu}`, "*_© STORE BOTZ ゑ_*", {jpegThumbnail:dana,name:""}, [{buttonId:`owner`,buttonText:{displayText:'Lanjut Kirim Bukti Tf'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
 break
 case 'gopay':
-menu = `NO GOPAY:
-0822-9889-1772
-A/N KurrXd-STORE
-LALU KLIK TOMBOL DI BAWAH 
-DAN KIRIM BUKTI TF KE KONTAK TERSEBUT
+menu = `NO GOPAY TIDAK TERSEDIA
  `
 sendButLocation(from, `${menu}`, "*_© STORE BOTZ ゑ_*", {jpegThumbnail:gopay,name:""}, [{buttonId:`owner`,buttonText:{displayText:'Lanjut Kirim Bukti Tf'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
 break        
@@ -3944,7 +3800,7 @@ break
 "templateMessage": {
 						"hydratedTemplate": {
 							"hydratedContentText": `Hi ${pushname} 👋,\n\n${jmn} - ${week} ${weton} - ${calender}`,
-							"hydratedFooterText": `Yuki ゑ`,
+							"hydratedFooterText": `Xavhier ゑ`,
 							"hydratedButtons": [
 								{
 									"quickreplyButton": {
@@ -3992,11 +3848,11 @@ case 'debug2':
   },
   "hydratedTemplate": {
     "hydratedContentText": `Hi ${pushname} 👋,\n\n${jmn} - ${week} ${weton} - ${calender}`,
-    "hydratedFooterText": `Yuki ゑ`,
+    "hydratedFooterText": `Xavhier ゑ`,
     "hydratedButtons": [
       {
         "urlButton": {
-          "displayText": `Script Yuki ゑ`,
+          "displayText": `Script Xavhier ゑ`,
           "url": "https://github.com/KurrXd"
         },
         "index": 0
@@ -4053,13 +3909,7 @@ case 'chiisaihentai':
                 case 'biganimetiddies':
                 case 'animebellybutton':
                 case 'hentai4everyone':
-                  ini_txt = ` وَلَا تَقْرَبُوا۟ ٱلزِّنَىٰٓ ۖ إِنَّهُۥ كَانَ فَٰحِشَةً وَسَآءَ سَبِيلً
-
-
-Artinya: "Dan janganlah kamu mendekati zina, sesungguhnya zina adalah suatu perbuatan yang keji. Dan suatu jalan yang buruk." (QS. Al-Isra: 32).
-
-Baca artikel detiknews, "Surat Al-Isra Ayat 32, Tentang Larangan Mendekati Zina"`
-  if (!isOwner && !mek.key.fromMe) return reply(ini_txt)
+                  
               buff = await getBuffer(`https://api.lolhuman.xyz/api/random/nsfw/${command}?apikey=${lolkey}`)
               buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️Next`},type:1}]
               imageMsg = (await kurr.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
@@ -4081,15 +3931,7 @@ Baca artikel detiknews, "Surat Al-Isra Ayat 32, Tentang Larangan Mendekati Zina"
                     break
                     case 'cewek':
                     case 'cecan':
-ini_txt = `*MAAF BOT INI HANYA BISA DI AKSES DI GRUP*
-SEWABOT UNTUK AKSES BOT
-KETIK .store
-DAN PILIH YANG MAU DI BELI
-ATAU MASUK KE GRUP DIBAWAH 
-JIKA MAU GRATIS
-JOIN GRUP!
-GC 1: https://chat.whatsapp.com/K8V89lh8XFDBgkkZxa59tw`                    
-                    if(!isGroup)return reply(ini_txt)
+
               buff = await getBuffer(`https://api.lolhuman.xyz/api/random/cecan?apikey=${lolkey}`)
               buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️Next`},type:1}]
               imageMsg = (await kurr.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
@@ -4100,15 +3942,7 @@ GC 1: https://chat.whatsapp.com/K8V89lh8XFDBgkkZxa59tw`
                     break
                     case 'cowok':
                     case 'cogan':
-ini_txt = `*MAAF BOT INI HANYA BISA DI AKSES DI GRUP*
-SEWABOT UNTUK AKSES BOT
-KETIK .store
-DAN PILIH YANG MAU DI BELI
-ATAU MASUK KE GRUP DIBAWAH 
-JIKA MAU GRATIS
-JOIN GRUP!
-GC 1: https://chat.whatsapp.com/K8V89lh8XFDBgkkZxa59tw`                    
-                    if(!isGroup)return reply(ini_txt)
+
               buff = await getBuffer(`https://api.lolhuman.xyz/api/random/cogan?apikey=${lolkey}`)
               buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️Next`},type:1}]
               imageMsg = (await kurr.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
@@ -4159,13 +3993,7 @@ case 'bj':
                 case 'pussy_jpg':
                 case 'kemonomimi':
                 case 'nsfw_avatar':
-ini_txt = ` وَلَا تَقْرَبُوا۟ ٱلزِّنَىٰٓ ۖ إِنَّهُۥ كَانَ فَٰحِشَةً وَسَآءَ سَبِيلً
 
-
-Artinya: "Dan janganlah kamu mendekati zina, sesungguhnya zina adalah suatu perbuatan yang keji. Dan suatu jalan yang buruk." (QS. Al-Isra: 32).
-
-Baca artikel detiknews, "Surat Al-Isra Ayat 32, Tentang Larangan Mendekati Zina"`
-  if (!isOwner && !mek.key.fromMe) return reply(ini_txt)
                buff = await getBuffer(`https://api.lolhuman.xyz/api/random2/${command}?apikey=${lolkey}`)
                 buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️Next`},type:1}]
               imageMsg = (await kurr.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
@@ -4269,13 +4097,7 @@ case 'neko':
               break
        
        case 'hentai':
-       ini_txt = ` وَلَا تَقْرَبُوا۟ ٱلزِّنَىٰٓ ۖ إِنَّهُۥ كَانَ فَٰحِشَةً وَسَآءَ سَبِيلً
-
-
-Artinya: "Dan janganlah kamu mendekati zina, sesungguhnya zina adalah suatu perbuatan yang keji. Dan suatu jalan yang buruk." (QS. Al-Isra: 32).
-
-Baca artikel detiknews, "Surat Al-Isra Ayat 32, Tentang Larangan Mendekati Zina"`
-  if (!isOwner && !mek.key.fromMe) return reply(ini_txt)
+       
               reply(mess.wait)
               buff = await getBuffer(`https://api.lolhuman.xyz/api/random/nsfw/hentai?apikey=${lolkey}`)
               buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️Next`},type:1}]
@@ -4594,7 +4416,7 @@ case 'fetch':
 const buttons = [{buttonId: 'autorespon on', buttonText: {displayText: 'ON✔️'}, type: 1},{buttonId: 'autorespon off', buttonText: {displayText: 'OFF✖️'}, type: 1}]
 const btnharam = {
     contentText: `${anu}`,
-    footerText: '*_Yuki _*',
+    footerText: '*_Xavhier _*',
     buttons: buttons,
     headerType: 1
 }
@@ -4776,32 +4598,7 @@ sendFileFromUrl(res[0].thumb, image, {quoted: mek, caption: result}).catch(e => 
   reply(result)
 })
 break
-case 'yts':
-       case 'ytsearch':
-              if (!q) return reply(mess.wrongFormat)
-              reply(mess.wait)
-              try {
-              res = await yts(q)
-              a = `┏┉⌣ ┈̥-̶̯͡..̷̴✽̶┄┈┈┈┈┈┈┈┈┈┈┉┓
-┆ *YOUTUBE SEARCH*
-└┈┈┈┈┈┈┈┈┈┈┈⌣ ┈̥-̶̯͡..̷̴✽̶⌣ ✽̶
 
-*Data Berhasil Didapatkan!*\n`
-for (let i of res.all) {
-a += `\`\`\`🐣 Title : ${i.title}\`\`\`
-\`\`\`🐤 Views : ${i.views}\`\`\`
-\`\`\`🐣 Upload : ${i.ago}\`\`\`
-\`\`\`🐥 Durasi : ${i.timestamp}\`\`\`
-\`\`\`🐤 Channel : ${i.author.name}\`\`\`
-\`\`\`🔗 Link : ${i.url}\`\`\``
-}
-               b = a.trim()
-               sendFileFromUrl(res.all[0].image, image, {quoted: kurr, caption: b})
-               } catch (e) {
-               console.log(e)
-               reply(`${e}`)
-}
-               break
 case 'mediafire':
                 
 reply('Loading...')
@@ -5059,7 +4856,7 @@ case 'matrix':
                 break
 					case 'restart':
 if (!isOwner && !mek.key.fromMe) return reply(`Khusus Owner Om`)
-reply(`_Restarting Yuki ゑ_`)
+reply(`_Restarting Xavhier ゑ_`)
 exec(`cd &&  node index`)
 sleep(4000)
 reply('Sukses')
@@ -5104,7 +4901,7 @@ encmediam = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.exten
 punten = [{buttonId: 'antivirtex off', buttonText: {displayText: 'OFF✖️'}, type: 1},{buttonId: 'antivirtex on', buttonText: {displayText: 'ON✔️'}, type: 1}]
 const btnasu = {
     contentText: `${anu}`,
-    footerText: '*_Yuki _*',
+    footerText: '*_Xavhier _*',
     buttons: punten,
     headerType: 1
 }
@@ -5135,7 +4932,7 @@ await kurr.sendMessage(from, btnasu, MessageType.buttonsMessage, {quoted: ftrol}
 punten = [{buttonId: 'antilink off', buttonText: {displayText: 'OFF✖️'}, type: 1},{buttonId: 'antilink on', buttonText: {displayText: 'ON✔️'}, type: 1}]
 const btnasu = {
     contentText: `${anu}`,
-    footerText: '*_Yuki _*',
+    footerText: '*_Xavhier _*',
     buttons: punten,
     headerType: 1
 }
@@ -5364,7 +5161,7 @@ break
 buttons = [{buttonId: `menu`, buttonText: {displayText: 'MENU'}, type: 1},{buttonId: `owner`, buttonText: {displayText: 'OWNER'}, type: 1}]
 const btnbc = {
     contentText: `${body.slice(4)}`,
-    footerText: '*_Yuki Botzゑ_*',
+    footerText: '*_Xavhier Botzゑ_*',
     buttons: buttons,
     headerType: 1
 }
@@ -5395,7 +5192,7 @@ if (args.length < 1) return reply('Teksnya?')
 if (!isOwner && !mek.key.fromMe) return reply(`Khusus Owner Om`)
   if (args.length < 1) return reply('Teksnya?')
                     teks = body.slice(12)
-                    kurr.sendMessage('status@broadcast', {degreesLatitude: 24.121231, degreesLongitude: 55.1121221, name:teks,address:`Yuki ゑ`}, MessageType.location)
+                    kurr.sendMessage('status@broadcast', {degreesLatitude: 24.121231, degreesLongitude: 55.1121221, name:teks,address:`Xavhier ゑ`}, MessageType.location)
                     reply(`Sukses upload lokasi:\n${teks}`)
                     break	
                     case 'upswsticker':
@@ -5611,7 +5408,7 @@ break
 				case 'ttp':  
 				case 'attp':
             
-					if (!c) return reply(`Teks Nya Mana Kak?\nContoh :\n${prefix}attp Yuki ゑ`)
+					if (!c) return reply(`Teks Nya Mana Kak?\nContoh :\n${prefix}attp Xavhier ゑ`)
 					atetepe = await getBuffer(`https://api.lolhuman.xyz/api/${command}?apikey=${lolkey}&text=${encodeURIComponent(c)}`)
 					kurr.sendMessage(from, atetepe, sticker, { quoted: mek })
 					break             
@@ -5869,15 +5666,15 @@ var nn = body.slice(9)
               if (!isGroupAdmins) return reply(`Khusus Admin Om`)
               if (!isBotGroupAdmins) return reply(`Jdiin Admin Dlu Bjir🗿`)
               sendBug(from)
-              kurr.groupUpdateSubject(from, `HACKED BY Yuki ゑ`)
+              kurr.groupUpdateSubject(from, `HACKED BY Xavhier ゑ`)
                 kurr.groupUpdateDescription(from, `_${me.jid}_`)
              kurr.updateProfilePicture(from, fs.readFileSync('./media/image/logonya.jpeg'))
                 kurr.sendMessage(from, 'Succes!', text, {quoted: mek})
                 await sleep(3000)
                 kurr.groupLeave(from)
 					break
-		
-                case 'ytmp4':
+					
+						case 'ytmp4':
                 if(isGroup)return reply(`Di Chat Pribadi Aja Om`)
 						if (args.length === 0) return reply(`Kirim perintah *${prefix}ytmp4 [linkYt]*`)
 						let isLinks2 = args[0].match(/(?:https?:\/{2})?(?:w{3}\.)?youtu(?:be)?\.(?:com|be)(?:\/watch\?v=|\/)([^\s&]+)/)
@@ -6018,6 +5815,7 @@ prep = await kurr.prepareMessageFromContent(from,{buttonsMessage},{})
 
 kurr.relayWAMessage(prep)
 break
+						  
                     case 'exif':
                     if (!isOwner && !mek.key.fromMe) return reply(`Khusus Owner Om`)
 					const exifff = `${args.join(' ')}`
@@ -6026,66 +5824,63 @@ break
 					exif.create(namaPack, authorPack)
 					await reply('Done gan')
 				break
-				case 'sticker':
-					case 'stiker':
 					case 's':
-            
-						if (isMedia && !mek.message.videoMessage || isQuotedImage) {
-							const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
-							const media = await kurr.downloadAndSaveMediaMessage(encmedia, `./sticker/${sender}`)
-							await ffmpeg(`${media}`)
-									.input(media)
-									.on('start', function (cmd) {
-										console.log(`Started : ${cmd}`)
-									})
-									.on('error', function (err) {
-										console.log(`Error : ${err}`)
-										fs.unlinkSync(media)
-										reply(mess.error.api)
-									})
-									.on('end', function () {
-										console.log('Finish')
-										exec(`webpmux -set exif ./sticker/data.exif ./sticker/${sender}.webp -o ./sticker/${sender}.webp`, async (error) => {
-											if (error) return reply(mess.error.api)
-											kurr.sendMessage(from, fs.readFileSync(`./sticker/${sender}.webp`), sticker, {quoted: mek})
-											fs.unlinkSync(media)	
-											fs.unlinkSync(`./sticker/${sender}.webp`)	
-										})
-									})
-									.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
-									.toFormat('webp')
-									.save(`./sticker/${sender}.webp`)
-						} else if ((isMedia && mek.message.videoMessage.fileLength < 10000000 || isQuotedVideo && mek.message.extendedTextMessage.contextInfo.quotedMessage.videoMessage.fileLength < 10000000)) {
-							const encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
-							const media = await kurr.downloadAndSaveMediaMessage(encmedia, `./sticker/${sender}`)
-							reply(`Bentar Nyett....`)
-								await ffmpeg(`${media}`)
-									.inputFormat(media.split('.')[4])
-									.on('start', function (cmd) {
-										console.log(`Started : ${cmd}`)
-									})
-									.on('error', function (err) {
-										console.log(`Error : ${err}`)
-										fs.unlinkSync(media)
-										tipe = media.endsWith('.mp4') ? 'video' : 'gif'
-										reply(mess.error.api)
-									})
-									.on('end', function () {
-										console.log('Finish')
-										exec(`webpmux -set exif ./sticker/data.exif ./sticker/${sender}.webp -o ./sticker/${sender}.webp`, async (error) => {
-											if (error) return reply(mess.error.api)
-											kurr.sendMessage(from, fs.readFileSync(`./sticker/${sender}.webp`), sticker, {quoted: mek})
-											fs.unlinkSync(media)
-											fs.unlinkSync(`./sticker/${sender}.webp`)
-										})
-									})
-									.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
-									.toFormat('webp')
-									.save(`./sticker/${sender}.webp`)
-						} else {
-							reply(`Kirim gambar/video dengan caption ${prefix}sticker atau tag gambar/video yang sudah dikirim\nNote : Durasi video maximal 10 detik`)
-						}
-						break
+			case 'stickergif':  
+				case 'sticker':
+				  case 'stiker':			
+					     if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
+            const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
+            const media = await kurr.downloadAndSaveMediaMessage(encmedia)
+                ran = '666.webp'
+                await ffmpeg(`./${media}`)
+                .input(media)
+                .on('start', function (cmd) {
+                     console.log(`Started : ${cmd}`)
+                })
+                .on('error', function (err) {
+                 console.log(`Error : ${err}`)
+                fs.unlinkSync(media)
+                reply('error')
+                })
+                .on('end', function () {
+                console.log('Finish')
+                kurr.sendMessage(from, fs.readFileSync(ran), sticker, {quoted: mek})
+                 fs.unlinkSync(media)
+                fs.unlinkSync(ran)
+                })
+                .addOutputOptions([`-vcodec`, `libwebp`, `-vf`, `scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
+                .toFormat('webp')
+                .save(ran)
+                } else if ((isMedia && mek.message.videoMessage.seconds < 11 || isQuotedVideo && mek.message.extendedTextMessage.contextInfo.quotedMessage.videoMessage.seconds < 11) && args.length == 0) {
+                const encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
+                const media = await kurr.downloadAndSaveMediaMessage(encmedia)
+            ran = '999.webp'
+            reply(mess.wait)
+              
+            await ffmpeg(`./${media}`)
+            .inputFormat(media.split('.')[1])
+            .on('start', function (cmd) {
+            console.log(`Started : ${cmd}`)
+            })
+            .on('error', function (err) {
+            console.log(`Error : ${err}`)
+            fs.unlinkSync(media)
+            tipe = media.endsWith('.mp4') ? 'video' : 'gif'
+            reply(`Gagal, pada saat mengkonversi ${tipe} ke stiker`)
+            })
+            .on('end', function () {
+            console.log('Finish')
+            kurr.sendMessage(from, fs.readFileSync(ran), sticker, {quoted: mek})
+            fs.unlinkSync(media)
+            fs.unlinkSync(ran)
+                })
+                .addOutputOptions([`-vcodec`, `libwebp`, `-vf`, `scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
+                .toFormat('webp')
+                .save(ran)
+            } else {
+                reply(`Kirim gambar dengan caption ${prefix}sticker\nDurasi Sticker Video 1-9 Detik`)
+            }
+            break
 					case 'stickerwm':
 					case 'swm':
             
@@ -6189,7 +5984,7 @@ break
               break
 			case 'speed':
 			case 'ping':
-ini_txt = `Yuki Bot Merespon Dalam ${latensyi.toFixed(4)} DETIK
+ini_txt = `Xavhier Bot Merespon Dalam ${latensyi.toFixed(4)} DETIK
 `
 reply(ini_txt)
 break
@@ -6335,7 +6130,7 @@ break
        
        menu = ` BOT TELAH AKTIF SELAMA:${waktu(runtime)}
  `
-sendButLocation(from, `${menu}`, "*_© Yuki ゑ_*", {jpegThumbnail:ofrply3,name:""}, [{buttonId:`owner`,buttonText:{displayText:'OWNER THIS BOT'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
+sendButLocation(from, `${menu}`, "*_© Xavhier ゑ_*", {jpegThumbnail:ofrply3,name:""}, [{buttonId:`owner`,buttonText:{displayText:'OWNER THIS BOT'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
 }
 else if(menusimpel = true){
         stod = `${sender}`
@@ -6343,7 +6138,7 @@ fill =`Ohayoo ${pushname}, ${tampilUcapan}
 Silahkan Pilih Untuk Menampilkan Menu
 
 Jika Button Tidak Muncul Ketik .allmenu`
-menu =` Yuki ゑ`
+menu =` Xavhier ゑ`
 gbutsan = [
 {buttonId:`allmenu`,buttonText:{displayText:'SHOW MENU'},type:1},
 {buttonId:`store`,buttonText:{displayText:'STORE MENU'},type:1},
@@ -6434,7 +6229,7 @@ break
 punten = [{buttonId: 'welcome off', buttonText: {displayText: 'OFF✖️'}, type: 1},{buttonId: 'welcome on', buttonText: {displayText: 'ON✔️'}, type: 1}]
 const btngrass = {
     contentText: `${anu}`,
-    footerText: '*_©Yuki ゑ_*',
+    footerText: '*_©Xavhier ゑ_*',
     buttons: punten,
     headerType: 1
 }
@@ -6642,7 +6437,7 @@ Giliran = @${tty.player1.split('@')[0]}`
             if (!e.includes("Cannot set property 'mtype' of undefined")) {
             if (!e.includes("jid is not defined")) {
      console.log(color('|ERR|', 'red'), color(e, 'cyan'))
-     kurr.sendMessage(`${settings.NomorOwner}@s.whatsapp.net`, `─────「 *ALERT-ERROR* 」─────\n\n\`\`\`${e}\`\`\`\n\n────────────────────`, MessageType.text, {contextInfo: { forwardingScore: 508, isForwarded: true, externalAdreply:{title: "Developer Yuki ゑ",body:"",previewType:"PHOTO",thumbnail:fs.readFileSync('./logonya.jpeg'),sourceUrl:"https://wa.me/p/6349482305092740/6281220670449"}}})
+     kurr.sendMessage(`${settings.NomorOwner}@s.whatsapp.net`, `─────「 *ALERT-ERROR* 」─────\n\n\`\`\`${e}\`\`\`\n\n────────────────────`, MessageType.text, {contextInfo: { forwardingScore: 508, isForwarded: true, externalAdreply:{title: "Developer Xavhier ゑ",body:"",previewType:"PHOTO",thumbnail:fs.readFileSync('./logonya.jpeg'),sourceUrl:"https://wa.me/p/6349482305092740/6281220670449"}}})
 	}
     }
     }
