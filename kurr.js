@@ -2758,7 +2758,8 @@ case 'jasasewa':
 
 ＰＲＩＣＥＬＩＳＴ ＨＡＲＧＡ：
 
-10Ｋ＝ ＰＥＲＭＡＮＥＮ
+ 10k : 6bln
+ 20k : 1thn
 
 
 MINAT KLIK ORDER
